@@ -25,6 +25,8 @@ namespace mapHelper
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
+                string directory = Directory.GetCurrentDirectory();
+                Console.WriteLine(directory);
                 fileName = openFileDialog1.FileName;
                 List<Segment> Sections = Parse(fileName);
                 foreach (Segment seg in Sections)
