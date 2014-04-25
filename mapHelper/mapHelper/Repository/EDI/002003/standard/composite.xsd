@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/002003/composite" xmlns:me="http://www.directedi.com/edixml/schema/EDI/002003/composite" xmlns:ee="http://www.directedi.com/edixml/schema/EDI/002003/dataelement" xmlns="http://www.w3.org/2001/XMLSchema">
-	<import namespace="http://www.directedi.com/edixml/schema/EDI/002003/dataelement" schemaLocation="dataelement.xsd"/></schema>
