@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/263" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>263</me:id>  
+    <me:title>RESIDENTIAL MORTGAGE INSURANCE APPLICATION RESPONSE</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>ME</me:functionalGroup>  
+    <me:description>RESIDENTIAL MORTGAGE INSURANCE APPLICATION RESPONSE</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N1" maxOccurs="2" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LX</me:id>  
+    <me:title>TRANSACTION SET LINE NUMBER</me:title>  
+    <me:description>TRANSACTION SET LINE NUMBER</me:description>  
+    </appinfo></annotation><sequence><element name="S3" type="es:S_LX" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>REF</me:id>  
+    <me:title>REFERENCE INFORMATION</me:title>  
+    <me:description>REFERENCE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_REF" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S7" type="es:S_MIR" maxOccurs="1" me:nodetype="SEG"></element><element name="S8" type="es:S_TXI" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_N9" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_MIC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>G63</me:id>  
+    <me:title>PERIOD</me:title>  
+    <me:description>PERIOD</me:description>  
+    </appinfo></annotation><sequence><element name="S11" type="es:S_G63" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_PCT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

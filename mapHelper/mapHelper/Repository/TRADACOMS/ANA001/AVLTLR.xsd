@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/TRADACOMS/map/AVLTLR" xmlns:me="http://www.directedi.com/edixml/schema/TRADACOMS/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>AVLTLR</me:id>  
+    <me:title>AVAILABILITY REPORT TRAILER</me:title>  
+    <me:plugintype>TRADACOMS</me:plugintype>  
+    <me:ediversion>ANA001</me:ediversion>  
+    <me:functionalGroup>AV</me:functionalGroup>  
+    <me:description>AVAILABILITY REPORT TRAILER</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_AFT" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --></schema>

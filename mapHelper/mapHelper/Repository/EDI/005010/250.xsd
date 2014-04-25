@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/250" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>250</me:id>  
+    <me:title>PURCHASE ORDER SHIPMENT MANAGEMENT DOCUMENT</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>PV</me:functionalGroup>  
+    <me:description>PURCHASE ORDER SHIPMENT MANAGEMENT DOCUMENT</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_L11" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_SSD" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PRF</me:id>  
+    <me:title>PURCHASE ORDER REFERENCE</me:title>  
+    <me:description>PURCHASE ORDER REFERENCE</me:description>  
+    </appinfo></annotation><sequence><element name="S4" type="es:S_PRF" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_L11" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_FOB" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_G05" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_H3" maxOccurs="6" minOccurs="0" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S10" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_L11" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_G05" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

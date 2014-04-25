@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/225" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004030/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004030/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>225</me:id>
+				<me:title>Response To A Cartage Work Assignment</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004030</me:ediversion>
+				<me:functionalGroup>MY</me:functionalGroup>
+				<me:description>Response To A Cartage Work Assignment</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_SCP" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_L11" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --></schema>

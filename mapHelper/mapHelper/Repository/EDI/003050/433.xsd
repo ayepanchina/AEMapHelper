@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/433" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>433</me:id>
+				<me:title>Railroad Reciprocal Switch File</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>RG</me:functionalGroup>
+				<me:description>Railroad Reciprocal Switch File</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_N3" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" maxOccurs="4" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>SMS</me:id>
+				<me:title>Station Codes Segment</me:title>
+				<me:description>Station Codes Segment</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_SMS" maxOccurs="1" me:nodetype="SEG"></element><element name="S7" type="es:S_SMR" maxOccurs="1" me:nodetype="SEG"></element><element name="S8" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_PI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="150" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CD</me:id>
+				<me:title>Shipment Conditions</me:title>
+				<me:description>Shipment Conditions</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_CD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_SID" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_BLR" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_N4" maxOccurs="50" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

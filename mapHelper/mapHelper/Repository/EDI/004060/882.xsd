@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/882" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>882</me:id>  
+    <me:title>DIRECT STORE DELIVERY SUMMARY INFORMATION</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>IG</me:functionalGroup>  
+    <me:description>DIRECT STORE DELIVERY SUMMARY INFORMATION</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_G47" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="10" me:nodetype="LOOP"></element><element name="S6" type="es:S_N9" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_G61" maxOccurs="8" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_G23" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="L_9" type="me:L_9" maxOccurs="9999" me:nodetype="LOOP"></element><element name="S16" type="es:S_G49" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>G48</me:id>  
+    <me:title>STATEMENT/INVOICE IDENTIFICATION</me:title>  
+    <me:description>STATEMENT/INVOICE IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S9" type="es:S_G48" maxOccurs="1" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="99" me:nodetype="LOOP"></element><element name="S12" type="es:S_G23" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_G25" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_G31" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_G33" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>G72</me:id>  
+    <me:title>ALLOWANCE OR CHARGE</me:title>  
+    <me:description>ALLOWANCE OR CHARGE</me:description>  
+    </appinfo></annotation><sequence><element name="S10" type="es:S_G72" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_G73" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/244" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>244</me:id>  
+    <me:title>PRODUCT SOURCE INFORMATION</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>PN</me:functionalGroup>  
+    <me:description>PRODUCT SOURCE INFORMATION</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>NM1</me:id>  
+    <me:title>INDIVIDUAL OR ORGANIZATIONAL NAME</me:title>  
+    <me:description>INDIVIDUAL OR ORGANIZATIONAL NAME</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_NM1" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_DTM" maxOccurs="1" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_4" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S4" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_N2" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>BSF</me:id>  
+    <me:title>BUSINESS FUNCTION</me:title>  
+    <me:description>BUSINESS FUNCTION</me:description>  
+    </appinfo></annotation><sequence><element name="S6" type="es:S_BSF" maxOccurs="1" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_9" type="me:L_9" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_7" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>NX2</me:id>  
+    <me:title>LOCATION ID COMPONENT</me:title>  
+    <me:description>LOCATION ID COMPONENT</me:description>  
+    </appinfo></annotation><sequence><element name="S7" type="es:S_NX2" maxOccurs="1" me:nodetype="SEG"></element><element name="S8" type="es:S_COM" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PID</me:id>  
+    <me:title>PRODUCT/ITEM DESCRIPTION</me:title>  
+    <me:description>PRODUCT/ITEM DESCRIPTION</me:description>  
+    </appinfo></annotation><sequence><element name="S9" type="es:S_PID" maxOccurs="1" me:nodetype="SEG"></element><element name="S10" type="es:S_CID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

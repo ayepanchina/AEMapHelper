@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/868" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>868</me:id>
+				<me:title>Electronic Form Structure</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>MT</me:functionalGroup>
+				<me:description>Electronic Form Structure</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_E01" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DMI" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_E03" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" minOccurs="0" maxOccurs="1000" me:nodetype="LOOP"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="1000" me:nodetype="LOOP"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="2000" me:nodetype="LOOP"></element><element name="L_15" type="me:L_15" minOccurs="0" maxOccurs="10000" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>E10</me:id>
+				<me:title>Transaction Set Grouping</me:title>
+				<me:description>Transaction Set Grouping</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_E10" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_E13" maxOccurs="1000" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>E20</me:id>
+				<me:title>Segment Header Information</me:title>
+				<me:description>Segment Header Information</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_E20" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_E22" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="L_8" type="me:L_8" minOccurs="0" maxOccurs="100" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>E24</me:id>
+				<me:title>Data Element Sequence In A Segment</me:title>
+				<me:description>Data Element Sequence In A Segment</me:description>
+				</appinfo></annotation><sequence><element name="S8" type="es:S_E24" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_E26" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>E30</me:id>
+				<me:title>Data Element Attributes</me:title>
+				<me:description>Data Element Attributes</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_E30" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_DAI" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_12" type="me:L_12" minOccurs="0" maxOccurs="10000" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_12" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>E34</me:id>
+				<me:title>Code List Values For A Data Element</me:title>
+				<me:description>Code List Values For A Data Element</me:description>
+				</appinfo></annotation><sequence><element name="S12" type="es:S_E34" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_DDI" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_DAI" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_15" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>E40</me:id>
+				<me:title>Edi Standards Note Reference</me:title>
+				<me:description>Edi Standards Note Reference</me:description>
+				</appinfo></annotation><sequence><element name="S15" type="es:S_E40" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_DMI" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_DDI" maxOccurs="1000" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

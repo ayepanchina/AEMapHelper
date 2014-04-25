@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/DOCAMR" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/97B/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/97B/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>DOCAMR</me:id>
+				<me:title>Request For An Amendment Of A Documentar</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>97B</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Request For An Amendment Of A Documentar</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_RFF" maxOccurs="2" me:nodetype="SEG"></element><element name="S3" type="es:S_FCA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_DTM" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_MOA" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_LOC" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_TSR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_FTX" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_9" type="me:L_9" maxOccurs="5" me:nodetype="LOOP"></element><element name="L_13" type="me:L_13" maxOccurs="9" me:nodetype="LOOP"></element><element name="L_17" type="me:L_17" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_9" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>FII</me:id>
+				<me:title>Financial Institution Information</me:title>
+				<me:description>Financial Institution Information</me:description>
+				</appinfo></annotation><sequence><element name="S9" type="es:S_FII" maxOccurs="1" me:nodetype="SEG"></element><element name="S10" type="es:S_RFF" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_COM" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S13" type="es:S_NAD" maxOccurs="1" me:nodetype="SEG"></element><element name="S14" type="es:S_RFF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_COM" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_17" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>AUT</me:id>
+				<me:title>Authentication Result</me:title>
+				<me:description>Authentication Result</me:description>
+				</appinfo></annotation><sequence><element name="S17" type="es:S_AUT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

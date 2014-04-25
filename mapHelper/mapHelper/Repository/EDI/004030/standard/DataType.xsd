@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/edi/004030/datatype" xmlns="http://www.w3.org/2001/XMLSchema">
+	<simpleType name="N">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N0">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N1">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N2">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N3">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N4">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N5">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N6">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N7">
+		<restriction base="string">
+	  		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N8">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N9">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="N10">
+		<restriction base="string">
+    		<pattern value="-{0,1}\d{1,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="R">
+		<restriction base="string">
+			<pattern value="-{0,1}\d{0,}.{0,1}\d{0,}" />
+		</restriction>
+	</simpleType>
+	<simpleType name="AN">
+		<restriction base="string"/>
+	</simpleType>
+	<simpleType name="ID">
+		<restriction base="string">
+			<pattern value="([A-Z0-9])+"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="DT">
+		<restriction base="string">
+			<pattern value="[12][0-9][0-9][0-9][01][0-9][0-3][0-9]"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="DT6">
+		<restriction base="string">
+			<pattern value="[0-9][0-9][01][0-9][0-3][0-9]"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="TM">
+		<restriction base="string">
+			<pattern value="[0-2][0-9][0-5][0-9]([0-5][0-9]([5-9][0-9]([0-9])*)*)*"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="B">
+		<restriction base="hexBinary"/>
+	</simpleType>
+</schema>

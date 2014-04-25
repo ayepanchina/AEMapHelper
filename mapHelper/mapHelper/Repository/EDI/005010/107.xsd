@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/107" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>107</me:id>  
+    <me:title>REQUEST FOR MOTOR CARRIER RATE PROPOSAL</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>MC</me:functionalGroup>  
+    <me:description>REQUEST FOR MOTOR CARRIER RATE PROPOSAL</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_G62" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_AT5" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_PR" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_ID4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_IV1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_MI1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_CUR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_MCT" maxOccurs="999" minOccurs="0" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_12" type="me:L_12" maxOccurs="10" me:nodetype="LOOP"></element><element name="L_17" type="me:L_17" maxOccurs="99999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_10" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>MS2</me:id>  
+    <me:title>EQUIPMENT OR CONTAINER OWNER AND TYPE</me:title>  
+    <me:description>EQUIPMENT OR CONTAINER OWNER AND TYPE</me:description>  
+    </appinfo></annotation><sequence><element name="S10" type="es:S_MS2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_AT9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_12" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S12" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S13" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_PER" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_17" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LX</me:id>  
+    <me:title>TRANSACTION SET LINE NUMBER</me:title>  
+    <me:description>TRANSACTION SET LINE NUMBER</me:description>  
+    </appinfo></annotation><sequence><element name="S17" type="es:S_LX" maxOccurs="1" me:nodetype="SEG"></element><element name="S18" type="es:S_GY" maxOccurs="999" me:nodetype="SEG"></element><element name="S19" type="es:S_CUR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_PR" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_ID4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S22" type="es:S_AT5" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="L_23" type="me:L_23" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_25" type="me:L_25" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_30" type="me:L_30" maxOccurs="99999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_23" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>MS2</me:id>  
+    <me:title>EQUIPMENT OR CONTAINER OWNER AND TYPE</me:title>  
+    <me:description>EQUIPMENT OR CONTAINER OWNER AND TYPE</me:description>  
+    </appinfo></annotation><sequence><element name="S23" type="es:S_MS2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S24" type="es:S_AT9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_25" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S25" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S26" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S27" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S28" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S29" type="es:S_G62" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_30" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>CA1</me:id>  
+    <me:title>RATE REQUEST IDENTIFIER</me:title>  
+    <me:description>RATE REQUEST IDENTIFIER</me:description>  
+    </appinfo></annotation><sequence><element name="S30" type="es:S_CA1" maxOccurs="1" me:nodetype="SEG"></element><element name="S31" type="es:S_GY" maxOccurs="999" me:nodetype="SEG"></element><element name="S32" type="es:S_PR" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S33" type="es:S_ID4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S34" type="es:S_IV1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S35" type="es:S_SV" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S36" type="es:S_AT5" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S37" type="es:S_MCT" maxOccurs="999" minOccurs="0" me:nodetype="SEG"></element><element name="L_38" type="me:L_38" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_40" type="me:L_40" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_38" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>MS2</me:id>  
+    <me:title>EQUIPMENT OR CONTAINER OWNER AND TYPE</me:title>  
+    <me:description>EQUIPMENT OR CONTAINER OWNER AND TYPE</me:description>  
+    </appinfo></annotation><sequence><element name="S38" type="es:S_MS2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S39" type="es:S_AT9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_40" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S40" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S41" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S42" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S43" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S44" type="es:S_G62" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

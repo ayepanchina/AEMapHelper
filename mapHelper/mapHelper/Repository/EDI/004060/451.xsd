@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/451" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>451</me:id>  
+    <me:title>RAILROAD EVENT REPORT</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>EV</me:functionalGroup>  
+    <me:description>RAILROAD EVENT REPORT</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_ER" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>ED</me:id>  
+    <me:title>EQUIPMENT DESCRIPTION</me:title>  
+    <me:description>EQUIPMENT DESCRIPTION</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_ED" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_ER" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_NA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_IC" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_CLR" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_ES" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

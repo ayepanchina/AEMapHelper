@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/IFTSTQ" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/97B/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/97B/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>IFTSTQ</me:id>
+				<me:title>International Multimodal Status</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>97B</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>International Multimodal Status</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_LOC" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element><element name="S6" type="es:S_TDT" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_EQD" maxOccurs="999" minOccurs="0" me:nodetype="SEG"></element><element name="L_8" type="me:L_8" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>RFF</me:id>
+				<me:title>References</me:title>
+				<me:description>References</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_RFF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S8" type="es:S_NAD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_9" type="me:L_9" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CTA</me:id>
+				<me:title>Contact Information</me:title>
+				<me:description>Contact Information</me:description>
+				</appinfo></annotation><sequence><element name="S9" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_COM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CNI</me:id>
+				<me:title>Consignment Information</me:title>
+				<me:description>Consignment Information</me:description>
+				</appinfo></annotation><sequence><element name="S11" type="es:S_CNI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_LOC" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_RFF" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_TDT" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="L_16" type="me:L_16" minOccurs="0" maxOccurs="99" me:nodetype="LOOP"></element><element name="L_18" type="me:L_18" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_16" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>EQD</me:id>
+				<me:title>Equipment Details</me:title>
+				<me:description>Equipment Details</me:description>
+				</appinfo></annotation><sequence><element name="S16" type="es:S_EQD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_TPL" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_18" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S18" type="es:S_NAD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_19" type="me:L_19" minOccurs="0" maxOccurs="99" me:nodetype="LOOP"></element><element name="L_22" type="me:L_22" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_19" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>GID</me:id>
+				<me:title>Goods Item Details</me:title>
+				<me:description>Goods Item Details</me:description>
+				</appinfo></annotation><sequence><element name="S19" type="es:S_GID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_FTX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_SGP" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_22" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CTA</me:id>
+				<me:title>Contact Information</me:title>
+				<me:description>Contact Information</me:description>
+				</appinfo></annotation><sequence><element name="S22" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_COM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/350" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>350</me:id>  
+    <me:title>CUSTOMS STATUS INFORMATION</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>AU</me:functionalGroup>  
+    <me:description>CUSTOMS STATUS INFORMATION</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_M10" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" minOccurs="0" maxOccurs="20" me:nodetype="LOOP"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>P4</me:id>  
+    <me:title>PORT INFORMATION</me:title>  
+    <me:description>PORT INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_P4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_V9" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_VID" maxOccurs="9999" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_K1" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>X4</me:id>  
+    <me:title>CUSTOMS RELEASE INFORMATION</me:title>  
+    <me:description>CUSTOMS RELEASE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S6" type="es:S_X4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_K1" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_N9" maxOccurs="999" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_N7" maxOccurs="999" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>BA1</me:id>  
+    <me:title>EXPORT SHIPMENT IDENTIFYING INFORMATION</me:title>  
+    <me:description>EXPORT SHIPMENT IDENTIFYING INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S10" type="es:S_BA1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>X4</me:id>  
+    <me:title>CUSTOMS RELEASE INFORMATION</me:title>  
+    <me:description>CUSTOMS RELEASE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S11" type="es:S_X4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_K1" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

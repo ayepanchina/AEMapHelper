@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/455" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004010/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>455</me:id>
+				<me:title>Railroad Parameter Trace Registration</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004010</me:ediversion>
+				<me:functionalGroup>PB</me:functionalGroup>
+				<me:description>Railroad Parameter Trace Registration</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BTC" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_ED" maxOccurs="500000" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_BLR" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_N9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_V9" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_7" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LX</me:id>
+				<me:title>Assigned Number</me:title>
+				<me:description>Assigned Number</me:description>
+				</appinfo></annotation><sequence><element name="S7" type="es:S_LX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_PRM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_F9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_D9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

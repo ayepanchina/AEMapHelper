@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/894" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>894</me:id>
+				<me:title>Delivery/return Base Record</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>DX</me:functionalGroup>
+				<me:description>Delivery/return Base Record</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_G82" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_LS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element><element name="S7" type="es:S_LE" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_G72" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_G23" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_G84" maxOccurs="1" me:nodetype="SEG"></element><element name="S11" type="es:S_G86" maxOccurs="1" me:nodetype="SEG"></element><element name="S12" type="es:S_G85" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>G83</me:id>
+				<me:title>Line Item Detail/direct Store Delivery</me:title>
+				<me:description>Line Item Detail/direct Store Delivery</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_G83" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_G22" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_G72" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_G23" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

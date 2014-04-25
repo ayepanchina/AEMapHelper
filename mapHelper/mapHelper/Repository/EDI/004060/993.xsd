@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/993" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>993</me:id>  
+    <me:title>SECURED RECEIPT OR ACKNOWLEDGMENT</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>NR</me:functionalGroup>  
+    <me:description>SECURED RECEIPT OR ACKNOWLEDGMENT</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_AK1" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_AK2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_SPE" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_APE" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="2" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>S4A</me:id>  
+    <me:title>ASSURANCE HEADER LEVEL 2</me:title>  
+    <me:description>ASSURANCE HEADER LEVEL 2</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_S4A" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_SVA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

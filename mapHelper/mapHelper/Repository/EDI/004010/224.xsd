@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/224" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004010/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>224</me:id>
+				<me:title>Motor Carrier Summary Freight Bill Manif</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004010</me:ediversion>
+				<me:functionalGroup>MA</me:functionalGroup>
+				<me:description>Motor Carrier Summary Freight Bill Manif</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_CF1" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CF2</me:id>
+				<me:title>Summary Freight Bill Detail</me:title>
+				<me:description>Summary Freight Bill Detail</me:description>
+				</appinfo></annotation><sequence><element name="S2" type="es:S_CF2" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_L11" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/129" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>129</me:id>  
+    <me:title>VEHICLE CARRIER RATE UPDATE</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>VH</me:functionalGroup>  
+    <me:description>VEHICLE CARRIER RATE UPDATE</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_VR" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_G62" maxOccurs="3" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>RT</me:id>  
+    <me:title>RATE DESTINATION</me:title>  
+    <me:description>RATE DESTINATION</me:description>  
+    </appinfo></annotation><sequence><element name="S3" type="es:S_RT" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_RT1" maxOccurs="99" me:nodetype="SEG"></element></sequence></complexType></schema>

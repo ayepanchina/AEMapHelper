@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/VESDEP" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/96A/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/96A/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>VESDEP</me:id>
+				<me:title>Vessel Departure</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>96A</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Vessel Departure</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_RFF" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="9" me:nodetype="LOOP"></element><element name="L_5" type="me:L_5" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_8" type="me:L_8" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_NAD" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_CTA" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>TDT</me:id>
+				<me:title>Details Of Transport</me:title>
+				<me:description>Details Of Transport</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_TDT" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_RFF" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>QTY</me:id>
+				<me:title>Quantity</me:title>
+				<me:description>Quantity</me:description>
+				</appinfo></annotation><sequence><element name="S8" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_FTX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

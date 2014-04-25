@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/811" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>811</me:id>
+				<me:title>Consolidated Service Invoice/statement</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>CI</me:functionalGroup>
+				<me:description>Consolidated Service Invoice/statement</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BIG" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_NTE" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_CUR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_ITD" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_9" type="me:L_9" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_15" type="me:L_15" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S97" type="es:S_TDS" maxOccurs="1" me:nodetype="SEG"></element><element name="L_98" type="me:L_98" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_101" type="me:L_101" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_103" type="me:L_103" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S110" type="es:S_CTT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_9" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S9" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_REF" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_15" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>HL</me:id>
+				<me:title>Hierarchical Level</me:title>
+				<me:description>Hierarchical Level</me:description>
+				</appinfo></annotation><sequence><element name="S15" type="es:S_HL" maxOccurs="1" me:nodetype="SEG"></element><element name="L_16" type="me:L_16" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_27" type="me:L_27" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_34" type="me:L_34" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_37" type="me:L_37" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_57" type="me:L_57" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_78" type="me:L_78" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_84" type="me:L_84" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_90" type="me:L_90" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_16" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LX</me:id>
+				<me:title>Assigned Number</me:title>
+				<me:description>Assigned Number</me:description>
+				</appinfo></annotation><sequence><element name="S16" type="es:S_LX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_VEH" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_SI" maxOccurs="8" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_PID" maxOccurs="200" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_MEA" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S22" type="es:S_AMT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_DTM" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element><element name="S24" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_25" type="me:L_25" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_25" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>QTY</me:id>
+				<me:title>Quantity</me:title>
+				<me:description>Quantity</me:description>
+				</appinfo></annotation><sequence><element name="S25" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S26" type="es:S_SI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_27" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NM1</me:id>
+				<me:title>Individual Or Organizational Name</me:title>
+				<me:description>Individual Or Organizational Name</me:description>
+				</appinfo></annotation><sequence><element name="S27" type="es:S_NM1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S28" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S29" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S30" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S31" type="es:S_REF" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S32" type="es:S_PER" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S33" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_34" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>ITA</me:id>
+				<me:title>Allowance</me:title>
+				<me:description>Allowance</me:description>
+				</appinfo></annotation><sequence><element name="S34" type="es:S_ITA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S35" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S36" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_37" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>IT1</me:id>
+				<me:title>Baseline Item Data (Invoice)</me:title>
+				<me:description>Baseline Item Data (Invoice)</me:description>
+				</appinfo></annotation><sequence><element name="S37" type="es:S_IT1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S38" type="es:S_SI" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S39" type="es:S_PID" maxOccurs="200" minOccurs="0" me:nodetype="SEG"></element><element name="S40" type="es:S_MEA" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S41" type="es:S_INC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S42" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S43" type="es:S_REF" maxOccurs="8" minOccurs="0" me:nodetype="SEG"></element><element name="S44" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S45" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S46" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_47" type="me:L_47" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_49" type="me:L_49" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element><element name="L_52" type="me:L_52" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_47" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>QTY</me:id>
+				<me:title>Quantity</me:title>
+				<me:description>Quantity</me:description>
+				</appinfo></annotation><sequence><element name="S47" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S48" type="es:S_SI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_49" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>ITA</me:id>
+				<me:title>Allowance</me:title>
+				<me:description>Allowance</me:description>
+				</appinfo></annotation><sequence><element name="S49" type="es:S_ITA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S50" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S51" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_52" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NM1</me:id>
+				<me:title>Individual Or Organizational Name</me:title>
+				<me:description>Individual Or Organizational Name</me:description>
+				</appinfo></annotation><sequence><element name="S52" type="es:S_NM1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S53" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S54" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S55" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S56" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_57" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>SLN</me:id>
+				<me:title>Subline Item Detail</me:title>
+				<me:description>Subline Item Detail</me:description>
+				</appinfo></annotation><sequence><element name="S57" type="es:S_SLN" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S58" type="es:S_SI" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S59" type="es:S_PID" maxOccurs="200" minOccurs="0" me:nodetype="SEG"></element><element name="S60" type="es:S_MEA" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S61" type="es:S_CUR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S62" type="es:S_INC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S63" type="es:S_ITA" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S64" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S65" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S66" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S67" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S68" type="es:S_AMT" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S69" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_70" type="me:L_70" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_72" type="me:L_72" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_70" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>QTY</me:id>
+				<me:title>Quantity</me:title>
+				<me:description>Quantity</me:description>
+				</appinfo></annotation><sequence><element name="S70" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S71" type="es:S_SI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_72" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NM1</me:id>
+				<me:title>Individual Or Organizational Name</me:title>
+				<me:description>Individual Or Organizational Name</me:description>
+				</appinfo></annotation><sequence><element name="S72" type="es:S_NM1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S73" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S74" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S75" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S76" type="es:S_REF" maxOccurs="8" minOccurs="0" me:nodetype="SEG"></element><element name="S77" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_78" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>TCD</me:id>
+				<me:title>Itemized Call Detail</me:title>
+				<me:description>Itemized Call Detail</me:description>
+				</appinfo></annotation><sequence><element name="S78" type="es:S_TCD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S79" type="es:S_SI" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S80" type="es:S_TXI" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S81" type="es:S_ITA" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_82" type="me:L_82" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_82" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>QTY</me:id>
+				<me:title>Quantity</me:title>
+				<me:description>Quantity</me:description>
+				</appinfo></annotation><sequence><element name="S82" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S83" type="es:S_SI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_84" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>USD</me:id>
+				<me:title>Usage Sensitive Detail</me:title>
+				<me:description>Usage Sensitive Detail</me:description>
+				</appinfo></annotation><sequence><element name="S84" type="es:S_USD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S85" type="es:S_SI" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S86" type="es:S_ITA" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S87" type="es:S_TRF" maxOccurs="18" minOccurs="0" me:nodetype="SEG"></element><element name="L_88" type="me:L_88" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_88" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>QTY</me:id>
+				<me:title>Quantity</me:title>
+				<me:description>Quantity</me:description>
+				</appinfo></annotation><sequence><element name="S88" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S89" type="es:S_SI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_90" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>III</me:id>
+				<me:title>Information</me:title>
+				<me:description>Information</me:description>
+				</appinfo></annotation><sequence><element name="S90" type="es:S_III" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S91" type="es:S_DTP" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S92" type="es:S_AMT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S93" type="es:S_PCT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_94" type="me:L_94" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_94" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LQ</me:id>
+				<me:title>Industry Code</me:title>
+				<me:description>Industry Code</me:description>
+				</appinfo></annotation><sequence><element name="S94" type="es:S_LQ" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S95" type="es:S_AMT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S96" type="es:S_PCT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_98" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>ITA</me:id>
+				<me:title>Allowance</me:title>
+				<me:description>Allowance</me:description>
+				</appinfo></annotation><sequence><element name="S98" type="es:S_ITA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S99" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S100" type="es:S_REF" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_101" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>BAL</me:id>
+				<me:title>Balance Detail</me:title>
+				<me:description>Balance Detail</me:description>
+				</appinfo></annotation><sequence><element name="S101" type="es:S_BAL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S102" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_103" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S103" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_104" type="me:L_104" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_106" type="me:L_106" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_104" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>BAL</me:id>
+				<me:title>Balance Detail</me:title>
+				<me:description>Balance Detail</me:description>
+				</appinfo></annotation><sequence><element name="S104" type="es:S_BAL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S105" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_106" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>ITA</me:id>
+				<me:title>Allowance</me:title>
+				<me:description>Allowance</me:description>
+				</appinfo></annotation><sequence><element name="S106" type="es:S_ITA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S107" type="es:S_DTM" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S108" type="es:S_REF" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S109" type="es:S_CUR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

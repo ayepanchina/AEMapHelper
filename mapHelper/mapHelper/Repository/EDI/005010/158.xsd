@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/158" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>158</me:id>  
+    <me:title>TAX JURISDICTION SOURCING</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>TJ</me:functionalGroup>  
+    <me:description>TAX JURISDICTION SOURCING</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N1" maxOccurs="2" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>DTP</me:id>  
+    <me:title>DATE OR TIME OR PERIOD</me:title>  
+    <me:description>DATE OR TIME OR PERIOD</me:description>  
+    </appinfo></annotation><sequence><element name="S3" type="es:S_DTP" maxOccurs="1" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_4" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LX</me:id>  
+    <me:title>TRANSACTION SET LINE NUMBER</me:title>  
+    <me:description>TRANSACTION SET LINE NUMBER</me:description>  
+    </appinfo></annotation><sequence><element name="S4" type="es:S_LX" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_NX2" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S6" type="es:S_PPA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_TA" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_ASI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

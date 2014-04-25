@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/139" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>139</me:id>
+				<me:title>Student Loan Guarantee Result</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>SL</me:functionalGroup>
+				<me:description>Student Loan Guarantee Result</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_GR" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_DB" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_6" type="me:L_6" maxOccurs="6" me:nodetype="LOOP"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LM</me:id>
+				<me:title>Code Source Information</me:title>
+				<me:description>Code Source Information</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_LM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_LQ" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>ENT</me:id>
+				<me:title>Entity</me:title>
+				<me:description>Entity</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_ENT" maxOccurs="1" me:nodetype="SEG"></element><element name="S7" type="es:S_IN2" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_IDB" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_DTP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>AMT</me:id>
+				<me:title>Monetary Amount</me:title>
+				<me:description>Monetary Amount</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_DTP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

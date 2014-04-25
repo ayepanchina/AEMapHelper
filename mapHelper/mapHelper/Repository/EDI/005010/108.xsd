@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/108" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>108</me:id>  
+    <me:title>RESPONSE TO A MOTOR CARRIER RATE PROPOSAL</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>MK</me:functionalGroup>  
+    <me:description>RESPONSE TO A MOTOR CARRIER RATE PROPOSAL</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_BLR" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_G62" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="10" me:nodetype="LOOP"></element><element name="L_9" type="me:L_9" maxOccurs="99999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S4" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_PER" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>CA1</me:id>  
+    <me:title>RATE REQUEST IDENTIFIER</me:title>  
+    <me:description>RATE REQUEST IDENTIFIER</me:description>  
+    </appinfo></annotation><sequence><element name="S9" type="es:S_CA1" maxOccurs="1" me:nodetype="SEG"></element><element name="S10" type="es:S_LC1" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType></schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/TRADACOMS/map/HSODET" xmlns:me="http://www.directedi.com/edixml/schema/TRADACOMS/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>HSODET</me:id>  
+    <me:title>THE HOMESHOPPING ORDER FILE DETAILS</me:title>  
+    <me:plugintype>TRADACOMS</me:plugintype>  
+    <me:ediversion>ANA001</me:ediversion>  
+    <me:functionalGroup>HS</me:functionalGroup>  
+    <me:description>THE HOMESHOPPING ORDER FILE DETAILS</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_CLO" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_ORD" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_HSO" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_DNA" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S8" type="es:S_OTR" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>OLD</me:id>  
+    <me:title>ORDER LINE DETAILS</me:title>  
+    <me:description>ORDER LINE DETAILS</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_OLD" maxOccurs="1" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>HSL</me:id>  
+    <me:title>HOME SHOPPING LINE INFORMATION</me:title>  
+    <me:description>HOME SHOPPING LINE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S6" type="es:S_HSL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_DNB" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

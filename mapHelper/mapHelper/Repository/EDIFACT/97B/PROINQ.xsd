@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/PROINQ" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/97B/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/97B/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>PROINQ</me:id>
+				<me:title>Product Inquiry</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>97B</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Product Inquiry</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="9" me:nodetype="SEG"></element><element name="S3" type="es:S_CUX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="99" me:nodetype="LOOP"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element><element name="L_9" type="me:L_9" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_NAD" maxOccurs="1" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CTA</me:id>
+				<me:title>Contact Information</me:title>
+				<me:description>Contact Information</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_COM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_7" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>RFF</me:id>
+				<me:title>References</me:title>
+				<me:description>References</me:description>
+				</appinfo></annotation><sequence><element name="S7" type="es:S_RFF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LIN</me:id>
+				<me:title>Line Item</me:title>
+				<me:description>Line Item</me:description>
+				</appinfo></annotation><sequence><element name="S9" type="es:S_LIN" maxOccurs="1" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element><element name="L_13" type="me:L_13" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CCI</me:id>
+				<me:title>Characteristic/class Id</me:title>
+				<me:description>Characteristic/class Id</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_CCI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_CAV" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_MEA" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>IRQ</me:id>
+				<me:title>Information Required</me:title>
+				<me:description>Information Required</me:description>
+				</appinfo></annotation><sequence><element name="S13" type="es:S_IRQ" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_PIA" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_IMD" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_MEA" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_NAD" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_PGI" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_DTM" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_20" type="me:L_20" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_20" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>PRI</me:id>
+				<me:title>Price Details</me:title>
+				<me:description>Price Details</me:description>
+				</appinfo></annotation><sequence><element name="S20" type="es:S_PRI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_RNG" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

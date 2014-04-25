@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/414" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>414</me:id>  
+    <me:title>RAIL CARHIRE SETTLEMENTS</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>CR</me:functionalGroup>  
+    <me:description>RAIL CARHIRE SETTLEMENTS</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_LEQ" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>CTC</me:id>  
+    <me:title>CAR HIRE TRANSACTION CONTROL</me:title>  
+    <me:description>CAR HIRE TRANSACTION CONTROL</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_CTC" maxOccurs="1" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="1000" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>CIC</me:id>  
+    <me:title>CAR INFORMATION CONTROL</me:title>  
+    <me:description>CAR INFORMATION CONTROL</me:description>  
+    </appinfo></annotation><sequence><element name="S3" type="es:S_CIC" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_REF" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LX</me:id>  
+    <me:title>TRANSACTION SET LINE NUMBER</me:title>  
+    <me:description>TRANSACTION SET LINE NUMBER</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_LX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_CHR" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_CYC" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_PRI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_PI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_REF" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_CUR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_CV" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType></schema>

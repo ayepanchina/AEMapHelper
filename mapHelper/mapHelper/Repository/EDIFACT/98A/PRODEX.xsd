@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/PRODEX" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/98A/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/98A/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>PRODEX</me:id>
+				<me:title>Product Exchange Reconciliation Message</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>98A</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Product Exchange Reconciliation Message</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="2" me:nodetype="SEG"></element><element name="S3" type="es:S_MEA" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_NAD" maxOccurs="2" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" maxOccurs="5" me:nodetype="LOOP"></element><element name="L_7" type="me:L_7" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>RFF</me:id>
+				<me:title>References</me:title>
+				<me:description>References</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_RFF" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_7" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>IMD</me:id>
+				<me:title>Item Description</me:title>
+				<me:description>Item Description</me:description>
+				</appinfo></annotation><sequence><element name="S7" type="es:S_IMD" maxOccurs="1" me:nodetype="SEG"></element><element name="S8" type="es:S_QTY" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_9" type="me:L_9" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LIN</me:id>
+				<me:title>Line Item</me:title>
+				<me:description>Line Item</me:description>
+				</appinfo></annotation><sequence><element name="S9" type="es:S_LIN" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_GIS" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_LOC" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_MEA" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_QTY" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_TDT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_16" type="me:L_16" minOccurs="0" maxOccurs="5" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_16" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>RFF</me:id>
+				<me:title>References</me:title>
+				<me:description>References</me:description>
+				</appinfo></annotation><sequence><element name="S16" type="es:S_RFF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

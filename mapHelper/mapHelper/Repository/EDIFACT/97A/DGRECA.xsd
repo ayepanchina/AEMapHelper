@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/DGRECA" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/97A/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/97A/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>DGRECA</me:id>
+				<me:title>Dangerous Goods Recapitulation</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>97A</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Dangerous Goods Recapitulation</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element><element name="L_5" type="me:L_5" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_10" type="me:L_10" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_13" type="me:L_13" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>RFF</me:id>
+				<me:title>References</me:title>
+				<me:description>References</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_RFF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>TDT</me:id>
+				<me:title>Details Of Transport</me:title>
+				<me:description>Details Of Transport</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_TDT" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_DTM" maxOccurs="2" me:nodetype="SEG"></element><element name="S7" type="es:S_LOC" maxOccurs="2" me:nodetype="SEG"></element><element name="S8" type="es:S_RFF" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_MEA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_NAD" maxOccurs="1" me:nodetype="SEG"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CTA</me:id>
+				<me:title>Contact Information</me:title>
+				<me:description>Contact Information</me:description>
+				</appinfo></annotation><sequence><element name="S11" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_COM" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>DGS</me:id>
+				<me:title>Dangerous Goods</me:title>
+				<me:description>Dangerous Goods</me:description>
+				</appinfo></annotation><sequence><element name="S13" type="es:S_DGS" maxOccurs="1" me:nodetype="SEG"></element><element name="S14" type="es:S_FTX" maxOccurs="9" me:nodetype="SEG"></element><element name="S15" type="es:S_MEA" maxOccurs="1" me:nodetype="SEG"></element><element name="S16" type="es:S_LOC" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_SGP" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

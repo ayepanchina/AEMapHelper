@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/TRADACOMS/map/PROINF" xmlns:me="http://www.directedi.com/edixml/schema/TRADACOMS/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>PROINF</me:id>  
+    <me:title>PRODUCT DETAILS</me:title>  
+    <me:plugintype>TRADACOMS</me:plugintype>  
+    <me:ediversion>ANA001</me:ediversion>  
+    <me:functionalGroup>PR</me:functionalGroup>  
+    <me:description>PRODUCT DETAILS</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="L_1" type="me:L_1" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_1" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>NOI</me:id>  
+    <me:title>NATURE OF INFORMATION</me:title>  
+    <me:description>NATURE OF INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S1" type="es:S_NOI" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PRD</me:id>  
+    <me:title>PRODUCT DETAILS/DESCRIPTION</me:title>  
+    <me:description>PRODUCT DETAILS/DESCRIPTION</me:description>  
+    </appinfo></annotation><sequence></sequence></complexType><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PRN</me:id>  
+    <me:title>PRODUCT REFERENCES</me:title>  
+    <me:description>PRODUCT REFERENCES</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_PRN" maxOccurs="1" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S3" type="es:S_PRD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_PRU" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_STD" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_DNC" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

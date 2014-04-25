@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/198" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>198</me:id>  
+    <me:title>LOAN VERIFICATION INFORMATION</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>ME</me:functionalGroup>  
+    <me:description>LOAN VERIFICATION INFORMATION</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_8" type="me:L_8" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_REF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_PER" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>IN1</me:id>  
+    <me:title>INDIVIDUAL IDENTIFICATION</me:title>  
+    <me:description>INDIVIDUAL IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S8" type="es:S_IN1" maxOccurs="1" me:nodetype="SEG"></element><element name="S9" type="es:S_IN2" maxOccurs="10" me:nodetype="SEG"></element><element name="S10" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_REF" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_13" type="me:L_13" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>API</me:id>  
+    <me:title>ACTIVITY OR PROCESS INFORMATION</me:title>  
+    <me:description>ACTIVITY OR PROCESS INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S13" type="es:S_API" maxOccurs="1" me:nodetype="SEG"></element><element name="L_14" type="me:L_14" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_14" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S14" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S15" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_REF" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_PER" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_AIN" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_DTP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_22" type="me:L_22" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_22" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PWK</me:id>  
+    <me:title>PAPERWORK</me:title>  
+    <me:description>PAPERWORK</me:description>  
+    </appinfo></annotation><sequence><element name="S22" type="es:S_PWK" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_PER" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S24" type="es:S_EMS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S25" type="es:S_NTE" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S26" type="es:S_DTP" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element><element name="S27" type="es:S_REF" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_28" type="me:L_28" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_30" type="me:L_30" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_41" type="me:L_41" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_47" type="me:L_47" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_28" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AIN</me:id>  
+    <me:title>INCOME</me:title>  
+    <me:description>INCOME</me:description>  
+    </appinfo></annotation><sequence><element name="S28" type="es:S_AIN" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S29" type="es:S_DTP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_30" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>NX1</me:id>  
+    <me:title>PROPERTY OR ENTITY IDENTIFICATION</me:title>  
+    <me:description>PROPERTY OR ENTITY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S30" type="es:S_NX1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S31" type="es:S_NX2" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S32" type="es:S_ACT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S33" type="es:S_NM1" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S34" type="es:S_PRD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S35" type="es:S_PEX" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S36" type="es:S_AMT" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S37" type="es:S_QTY" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S38" type="es:S_YNQ" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S39" type="es:S_DTP" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S40" type="es:S_MSG" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_41" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>FAA</me:id>  
+    <me:title>FINANCIAL ASSET ACCOUNT</me:title>  
+    <me:description>FINANCIAL ASSET ACCOUNT</me:description>  
+    </appinfo></annotation><sequence><element name="S41" type="es:S_FAA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S42" type="es:S_NM1" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S43" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S44" type="es:S_MSG" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="L_45" type="me:L_45" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_45" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>DTP</me:id>  
+    <me:title>DATE OR TIME OR PERIOD</me:title>  
+    <me:description>DATE OR TIME OR PERIOD</me:description>  
+    </appinfo></annotation><sequence><element name="S45" type="es:S_DTP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S46" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_47" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>CDA</me:id>  
+    <me:title>CONSUMER CREDIT ACCOUNT</me:title>  
+    <me:description>CONSUMER CREDIT ACCOUNT</me:description>  
+    </appinfo></annotation><sequence><element name="S47" type="es:S_CDA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S48" type="es:S_NM1" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S49" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S50" type="es:S_DTP" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element><element name="S51" type="es:S_MSG" maxOccurs="20" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

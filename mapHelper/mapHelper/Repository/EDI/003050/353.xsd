@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/353" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>353</me:id>
+				<me:title>U.S. Customs Events Advisory Details</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>SO</me:functionalGroup>
+				<me:description>U.S. Customs Events Advisory Details</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_M10" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_P4" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_M15" maxOccurs="9999" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --></schema>

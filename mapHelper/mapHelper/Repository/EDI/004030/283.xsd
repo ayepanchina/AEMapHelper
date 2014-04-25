@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/283" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004030/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004030/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>283</me:id>
+				<me:title>Tax Or Fee Exemption Certification</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004030</me:ediversion>
+				<me:functionalGroup>TE</me:functionalGroup>
+				<me:description>Tax Or Fee Exemption Certification</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="2" me:nodetype="LOOP"></element><element name="L_15" type="me:L_15" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NM1</me:id>
+				<me:title>Individual Or Organizational Name</me:title>
+				<me:description>Individual Or Organizational Name</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_NM1" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_N2" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_IN2" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_N3" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_PER" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_DTM" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_INI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_TC2" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_YNQ" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_15" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>TXI</me:id>
+				<me:title>Tax Information</me:title>
+				<me:description>Tax Information</me:description>
+				</appinfo></annotation><sequence><element name="S15" type="es:S_TXI" maxOccurs="1" me:nodetype="SEG"></element><element name="S16" type="es:S_LQ" maxOccurs="1" me:nodetype="SEG"></element><element name="S17" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_DTM" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_AMT" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_QTY" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_YNQ" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S22" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_23" type="me:L_23" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_23" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LX</me:id>
+				<me:title>Assigned Number</me:title>
+				<me:description>Assigned Number</me:description>
+				</appinfo></annotation><sequence><element name="S23" type="es:S_LX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S24" type="es:S_PID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S25" type="es:S_AMT" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S26" type="es:S_QTY" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S27" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_28" type="me:L_28" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_28" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S28" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S29" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S30" type="es:S_N3" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S31" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S32" type="es:S_PER" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S33" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_34" type="me:L_34" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_34" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>PID</me:id>
+				<me:title>Product/item Description</me:title>
+				<me:description>Product/item Description</me:description>
+				</appinfo></annotation><sequence><element name="S34" type="es:S_PID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S35" type="es:S_AMT" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S36" type="es:S_QTY" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S37" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

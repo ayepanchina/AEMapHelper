@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/831" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004010/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>831</me:id>
+				<me:title>Application Control Totals</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004010</me:ediversion>
+				<me:functionalGroup>CT</me:functionalGroup>
+				<me:description>Application Control Totals</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_N9" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_TRN" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_QTY" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>AMT</me:id>
+				<me:title>Monetary Amount</me:title>
+				<me:description>Monetary Amount</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>
