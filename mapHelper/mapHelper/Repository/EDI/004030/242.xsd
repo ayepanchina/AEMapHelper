@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/242" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004030/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004030/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>242</me:id>
+				<me:title>Data Status Tracking</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004030</me:ediversion>
+				<me:functionalGroup>DS</me:functionalGroup>
+				<me:description>Data Status Tracking</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_IRP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_DTP" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_MSG" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>HL</me:id>
+				<me:title>Hierarchical Level</me:title>
+				<me:description>Hierarchical Level</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_HL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_IIS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_QTY" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>STS</me:id>
+				<me:title>Interchange Status Segment</me:title>
+				<me:description>Interchange Status Segment</me:description>
+				</appinfo></annotation><sequence><element name="S11" type="es:S_STS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_QTY" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

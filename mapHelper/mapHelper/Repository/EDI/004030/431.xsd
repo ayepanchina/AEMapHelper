@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/431" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004030/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004030/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>431</me:id>
+				<me:title>Railroad Station Master File</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004030</me:ediversion>
+				<me:functionalGroup>RM</me:functionalGroup>
+				<me:description>Railroad Station Master File</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_SMB" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N4" maxOccurs="10" me:nodetype="SEG"></element><element name="S3" type="es:S_CD" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_SMS" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_SMA" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_SMR" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_SMO" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --></schema>

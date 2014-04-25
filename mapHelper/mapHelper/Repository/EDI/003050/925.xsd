@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/925" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>925</me:id>
+				<me:title>Claim Tracer</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>GC</me:functionalGroup>
+				<me:description>Claim Tracer</me:description>				
+			</appinfo></annotation><sequence>
+<element name="L_1" type="me:L_1" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_1" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>F10</me:id>
+				<me:title>Identification Of Claim (Tracer)</me:title>
+				<me:description>Identification Of Claim (Tracer)</me:description>
+				</appinfo></annotation><sequence><element name="S1" type="es:S_F10" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_F02" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

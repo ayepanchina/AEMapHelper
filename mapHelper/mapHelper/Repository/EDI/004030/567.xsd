@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/567" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004030/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004030/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>567</me:id>
+				<me:title>Contract Completion Status</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004030</me:ediversion>
+				<me:functionalGroup>D3</me:functionalGroup>
+				<me:description>Contract Completion Status</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BC" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N1" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_G61" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_NTE" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" maxOccurs="100" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CS</me:id>
+				<me:title>Contract Summary</me:title>
+				<me:description>Contract Summary</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_CS" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_N9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_G62" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_G61" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_NTE" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element><element name="L_13" type="me:L_13" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LM</me:id>
+				<me:title>Code Source Information</me:title>
+				<me:description>Code Source Information</me:description>
+				</appinfo></annotation><sequence><element name="S11" type="es:S_LM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_LQ" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S13" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

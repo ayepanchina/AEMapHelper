@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/324" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>324</me:id>
+				<me:title>Vessel Stow Plan (Ocean)</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>SO</me:functionalGroup>
+				<me:description>Vessel Stow Plan (Ocean)</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_V1" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="20" me:nodetype="LOOP"></element><element name="L_4" type="me:L_4" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>R4</me:id>
+				<me:title>Port</me:title>
+				<me:description>Port</me:description>
+				</appinfo></annotation><sequence><element name="S2" type="es:S_R4" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_DTM" maxOccurs="15" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N7</me:id>
+				<me:title>Equipment Details</me:title>
+				<me:description>Equipment Details</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_N7" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_M7" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_ED" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_NA" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_V4" maxOccurs="1" me:nodetype="SEG"></element><element name="S9" type="es:S_R4" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_W09" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_H3" maxOccurs="6" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_H1" maxOccurs="4" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_N9" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

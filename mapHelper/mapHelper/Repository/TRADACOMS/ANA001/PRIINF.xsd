@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/TRADACOMS/map/PRIINF" xmlns:me="http://www.directedi.com/edixml/schema/TRADACOMS/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>PRIINF</me:id>  
+    <me:title>PRICE INFORMATION FILE DETAIL</me:title>  
+    <me:plugintype>TRADACOMS</me:plugintype>  
+    <me:ediversion>ANA001</me:ediversion>  
+    <me:functionalGroup>PR</me:functionalGroup>  
+    <me:description>PRICE INFORMATION FILE DETAIL</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="L_1" type="me:L_1" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_8" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>DSC</me:id>  
+    <me:title>UISCOUNT HEADER</me:title>  
+    <me:description>UISCOUNT HEADER</me:description>  
+    </appinfo></annotation><sequence></sequence></complexType><complexType name="L_1" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>NOI</me:id>  
+    <me:title>NATURE OF INFORMATION</me:title>  
+    <me:description>NATURE OF INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S1" type="es:S_NOI" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S2" type="es:S_CLR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_8" type="me:L_8" minOccurs="0" maxOccurs="0" me:nodetype="LOOP"></element><element name="S8" type="es:S_DSC" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_DSD" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PRI</me:id>  
+    <me:title>PRICE HEADER</me:title>  
+    <me:description>PRICE HEADER</me:description>  
+    </appinfo></annotation><sequence></sequence></complexType><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PRN</me:id>  
+    <me:title>PRODUCT REFERENCES</me:title>  
+    <me:description>PRODUCT REFERENCES</me:description>  
+    </appinfo></annotation><sequence><element name="S3" type="es:S_PRN" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_PRD" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_CLP" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S6" type="es:S_PRI" maxOccurs="1" me:nodetype="SEG"></element><element name="S7" type="es:S_PRP" maxOccurs="unbounded" me:nodetype="SEG"></element></sequence></complexType></schema>

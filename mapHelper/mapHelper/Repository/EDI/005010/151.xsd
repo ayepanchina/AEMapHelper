@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/151" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>151</me:id>  
+    <me:title>ELECTRONIC FILING OF TAX RETURN DATA ACKNOWLEDGMENT</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>TA</me:functionalGroup>  
+    <me:description>ELECTRONIC FILING OF TAX RETURN DATA ACKNOWLEDGMENT</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BTA" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_BTI" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_AMT" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_QTY" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="1000" me:nodetype="LOOP"></element><element name="L_9" type="me:L_9" minOccurs="0" maxOccurs="100000" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_7" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PBI</me:id>  
+    <me:title>PROBLEM IDENTIFICATION</me:title>  
+    <me:description>PROBLEM IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S7" type="es:S_PBI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_TIA" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_9" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>TFS</me:id>  
+    <me:title>TAX FORM</me:title>  
+    <me:description>TAX FORM</me:description>  
+    </appinfo></annotation><sequence><element name="S9" type="es:S_TFS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_12" type="me:L_12" minOccurs="0" maxOccurs="1000" me:nodetype="LOOP"></element><element name="L_14" type="me:L_14" minOccurs="0" maxOccurs="100000" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_12" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PBI</me:id>  
+    <me:title>PROBLEM IDENTIFICATION</me:title>  
+    <me:description>PROBLEM IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S12" type="es:S_PBI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_TIA" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_14" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>FGS</me:id>  
+    <me:title>FORM GROUP</me:title>  
+    <me:description>FORM GROUP</me:description>  
+    </appinfo></annotation><sequence><element name="S14" type="es:S_FGS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_17" type="me:L_17" minOccurs="0" maxOccurs="1000" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_17" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PBI</me:id>  
+    <me:title>PROBLEM IDENTIFICATION</me:title>  
+    <me:description>PROBLEM IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S17" type="es:S_PBI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_TIA" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

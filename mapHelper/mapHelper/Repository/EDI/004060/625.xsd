@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/625" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>625</me:id>  
+    <me:title>WELL INFORMATION</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>WL</me:functionalGroup>  
+    <me:description>WELL INFORMATION</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>HL</me:id>  
+    <me:title>HIERARCHICAL LEVEL</me:title>  
+    <me:description>HIERARCHICAL LEVEL</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_HL" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_PID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_DTP" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_REF" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_YNQ" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_MTX" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_8" type="me:L_8" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_14" type="me:L_14" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_19" type="me:L_19" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LIE</me:id>  
+    <me:title>INDIVIDUAL OR EVENT LOCATION</me:title>  
+    <me:description>INDIVIDUAL OR EVENT LOCATION</me:description>  
+    </appinfo></annotation><sequence><element name="S8" type="es:S_LIE" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_PPA" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S10" type="es:S_MEA" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>CID</me:id>  
+    <me:title>CHARACTERISTIC/CLASS ID</me:title>  
+    <me:description>CHARACTERISTIC/CLASS ID</me:description>  
+    </appinfo></annotation><sequence><element name="S11" type="es:S_CID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_QTY" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_MEA" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_14" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S14" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_N3" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_PER" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_19" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LM</me:id>  
+    <me:title>CODE SOURCE INFORMATION</me:title>  
+    <me:description>CODE SOURCE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S19" type="es:S_LM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_LQ" maxOccurs="unbounded" me:nodetype="SEG"></element></sequence></complexType></schema>

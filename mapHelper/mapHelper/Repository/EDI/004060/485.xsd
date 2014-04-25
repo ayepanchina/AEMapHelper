@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/485" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>485</me:id>  
+    <me:title>RATEMAKING ACTION</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>TP</me:functionalGroup>  
+    <me:description>RATEMAKING ACTION</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_DK" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_PRI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_SA" maxOccurs="1" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" minOccurs="0" maxOccurs="8" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>SC</me:id>  
+    <me:title>DOCKET SUB-LEVEL</me:title>  
+    <me:description>DOCKET SUB-LEVEL</me:description>  
+    </appinfo></annotation><sequence><element name="S4" type="es:S_SC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>RA</me:id>  
+    <me:title>RATE HEADER</me:title>  
+    <me:description>RATE HEADER</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_RA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_FK" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="64" me:nodetype="LOOP"></element><element name="S9" type="es:S_SW" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_7" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>MC</me:id>  
+    <me:title>MISCELLANEOUS AND ACCESSORIAL CHARGES</me:title>  
+    <me:description>MISCELLANEOUS AND ACCESSORIAL CHARGES</me:description>  
+    </appinfo></annotation><sequence><element name="S7" type="es:S_MC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_FK" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

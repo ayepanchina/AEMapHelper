@@ -1,0 +1,42 @@
+xs:all#<xs:all>|</xs:all>
+xs:annotation#<xs:annotation>|</xs:annotation>
+xs:any#<xs:any>|</xs:any>
+xs:anyAttribute#<xs:anyAttribute>|</xs:anyAttribute>
+xs:appinfo#<xs:appinfo>|</xs:appinfo>
+xs:attribute#<xs:attribute name="|"></xs:attribute>
+xs:attributeGroup#<xs:attributeGroup name="|"></xs:attributeGroup>
+xs:choice#<xs:choice>|</xs:choice>
+xs:complexContent#<xs:complexContent>\n\t<xs:restriction base="|"></xs:restriction>\n</xs:complexContent>
+xs:complexType#<xs:complexType name="">\n\t<xs:simpleContent>\n\t\t<xs:restriction base="|"></xs:restriction>\n\t</xs:simpleContent>\n</xs:complexType>
+xs:documentation#<xs:documentation>|</xs:documentation>
+xs:element#<xs:element name="|"></xs:element>
+xs:enumeration#<xs:enumeration value="|"></xs:enumeration>
+xs:extension#<xs:extension base="|"></xs:extension>
+xs:field#<xs:field xpath="|"></xs:field>
+xs:fractionDigits#<xs:fractionDigits value="|"></xs:fractionDigits>
+xs:group#<xs:group name="">\n\t<xs:all>|</xs:all>\n</xs:group>
+xs:import#<xs:import>|</xs:import>
+xs:include#<xs:include schemaLocation="|"></xs:include>
+xs:key#<xs:key name="">\n\t<xs:selector xpath="|"></xs:selector>\n\t<xs:field xpath=""></xs:field>\n</xs:key>
+xs:keyref#<xs:keyref name="|" refer="">\n\t<xs:selector xpath=""></xs:selector>\n\t<xs:field xpath=""></xs:field>\n</xs:keyref>
+xs:length#<xs:length value="|"></xs:length>
+xs:list#<xs:list>|</xs:list>
+xs:maxExclusive#<xs:maxExclusive value="|"></xs:maxExclusive>
+xs:maxInclusive#<xs:maxInclusive value="|"></xs:maxInclusive>
+xs:maxLength#<xs:maxLength value="|"></xs:maxLength>
+xs:minExclusive#<xs:minExclusive value="|"></xs:minExclusive>
+xs:minInclusive#<xs:minInclusive value="|"></xs:minInclusive>
+xs:minLength#<xs:minLength value="|"></xs:minLength>
+xs:notation#<xs:notation name="|" public=""></xs:notation>
+xs:pattern#<xs:pattern value="|"></xs:pattern>
+xs:redefine#<xs:redefine schemaLocation="|"></xs:redefine>
+xs:restriction#<xs:restriction>|</xs:restriction>
+xs:schema#<xs:schema>|</xs:schema>
+xs:selector#<xs:selector xpath="|"></xs:selector>
+xs:sequence#<xs:sequence>|</xs:sequence>
+xs:simpleContent#<xs:simpleContent>\n\t<xs:restriction base="|"></xs:restriction>\n</xs:simpleContent>
+xs:simpleType#<xs:simpleType name="|">\n\t<xs:restriction></xs:restriction>\n</xs:simpleType>
+xs:totalDigits#<xs:totalDigits value="|"></xs:totalDigits>
+xs:union#<xs:union>|</xs:union>
+xs:unique#<xs:unique name="|">\n\t<xs:selector xpath=""></xs:selector>\n\t<xs:field xpath=""></xs:field>\n</xs:unique>
+xs:whiteSpace#<xs:whiteSpace value="|"></xs:whiteSpace>

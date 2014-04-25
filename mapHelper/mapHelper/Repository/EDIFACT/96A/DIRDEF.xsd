@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/DIRDEF" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/96A/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/96A/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>DIRDEF</me:id>
+				<me:title>Directory Definition</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>96A</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Directory Definition</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S2" type="es:S_DII" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_FTX" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element><element name="L_8" type="me:L_8" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element><element name="L_14" type="me:L_14" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element><element name="L_17" type="me:L_17" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element><element name="L_20" type="me:L_20" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element><element name="L_22" type="me:L_22" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_NAD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CTA</me:id>
+				<me:title>Contact Information</me:title>
+				<me:description>Contact Information</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_COM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>MSG</me:id>
+				<me:title>Message Type Identification</me:title>
+				<me:description>Message Type Identification</me:description>
+				</appinfo></annotation><sequence><element name="S8" type="es:S_MSG" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_FTX" maxOccurs="999" minOccurs="0" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>SGU</me:id>
+				<me:title>Segment Usage Details</me:title>
+				<me:description>Segment Usage Details</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_SGU" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_FTX" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element><element name="L_12" type="me:L_12" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_12" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>GRU</me:id>
+				<me:title>Segment Group Usage Details</me:title>
+				<me:description>Segment Group Usage Details</me:description>
+				</appinfo></annotation><sequence><element name="S12" type="es:S_GRU" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_FTX" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_14" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>SEG</me:id>
+				<me:title>Segment Identification</me:title>
+				<me:description>Segment Identification</me:description>
+				</appinfo></annotation><sequence><element name="S14" type="es:S_SEG" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_FTX" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_ELU" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_17" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CMP</me:id>
+				<me:title>Composite Data Element Identification</me:title>
+				<me:description>Composite Data Element Identification</me:description>
+				</appinfo></annotation><sequence><element name="S17" type="es:S_CMP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_FTX" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_ELU" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_20" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>ELM</me:id>
+				<me:title>Simple Data Element Details</me:title>
+				<me:description>Simple Data Element Details</me:description>
+				</appinfo></annotation><sequence><element name="S20" type="es:S_ELM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_FTX" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_22" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CDS</me:id>
+				<me:title>Code Value Definition</me:title>
+				<me:description>Code Value Definition</me:description>
+				</appinfo></annotation><sequence><element name="S22" type="es:S_CDS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_FTX" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="L_24" type="me:L_24" minOccurs="0" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_24" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CDV</me:id>
+				<me:title>Code Value Definition</me:title>
+				<me:description>Code Value Definition</me:description>
+				</appinfo></annotation><sequence><element name="S24" type="es:S_CDV" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S25" type="es:S_FTX" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

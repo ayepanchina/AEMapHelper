@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/TRADACOMS/map/BTOERS" xmlns:me="http://www.directedi.com/edixml/schema/TRADACOMS/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>BTOERS</me:id>  
+    <me:title>THE BOOK TRADE ORDER DETAIL</me:title>  
+    <me:plugintype>TRADACOMS</me:plugintype>  
+    <me:ediversion>ANA001</me:ediversion>  
+    <me:functionalGroup>BT</me:functionalGroup>  
+    <me:description>THE BOOK TRADE ORDER DETAIL</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_CLO" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_ORD" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_DIN" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_DNA" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S8" type="es:S_BIB" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_MUL" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S12" type="es:S_OTR" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>OLD</me:id>  
+    <me:title>ORDER LINE DETAILS</me:title>  
+    <me:description>ORDER LINE DETAILS</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_OLD" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_SDQ" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S7" type="es:S_DNC" maxOccurs="unbounded" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>PUB</me:id>  
+    <me:title>PUBLISHER/DISTRIBUTOR</me:title>  
+    <me:description>PUBLISHER/DISTRIBUTOR</me:description>  
+    </appinfo></annotation><sequence><element name="S10" type="es:S_PUB" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_DNB" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

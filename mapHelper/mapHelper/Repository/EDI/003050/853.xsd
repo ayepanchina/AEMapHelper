@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/853" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>853</me:id>
+				<me:title>Routing And Carrier Instruction</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>RI</me:functionalGroup>
+				<me:description>Routing And Carrier Instruction</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_NTE" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_G62" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="200" me:nodetype="LOOP"></element><element name="L_10" type="me:L_10" maxOccurs="200000" me:nodetype="LOOP"></element><element name="S24" type="es:S_CTT" maxOccurs="1" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_REF" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>TD5</me:id>
+				<me:title>Carrier Details (Routing Sequence/transi</me:title>
+				<me:description>Carrier Details (Routing Sequence/transi</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_TD5" maxOccurs="1" me:nodetype="SEG"></element><element name="S11" type="es:S_TD3" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_TD4" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_NTE" maxOccurs="100" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_REF" maxOccurs="200" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_MEA" maxOccurs="40" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_FK" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_G62" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_18" type="me:L_18" minOccurs="0" maxOccurs="200" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_18" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S18" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S22" type="es:S_REF" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

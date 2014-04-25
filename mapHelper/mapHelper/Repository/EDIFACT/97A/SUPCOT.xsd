@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/SUPCOT" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/97A/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/97A/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>SUPCOT</me:id>
+				<me:title>Superannuation Contributions Advice Mess</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>97A</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Superannuation Contributions Advice Mess</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BGM" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_RFF" maxOccurs="6" me:nodetype="SEG"></element><element name="S3" type="es:S_PAI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_CUX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_FII" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_DTM" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_PAT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_FTX" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_9" type="me:L_9" minOccurs="0" maxOccurs="6" me:nodetype="LOOP"></element><element name="S12" type="es:S_UNS" maxOccurs="1" me:nodetype="SEG"></element><element name="L_13" type="me:L_13" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="S29" type="es:S_UNS" maxOccurs="1" me:nodetype="SEG"></element><element name="S30" type="es:S_MOA" maxOccurs="1" me:nodetype="SEG"></element><element name="S31" type="es:S_CNT" maxOccurs="9" minOccurs="0" me:nodetype="SEG"></element><element name="S32" type="es:S_AUT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_9" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S9" type="es:S_NAD" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_10" type="me:L_10" minOccurs="0" maxOccurs="5" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>CTA</me:id>
+				<me:title>Contact Information</me:title>
+				<me:description>Contact Information</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_CTA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_COM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>NAD</me:id>
+				<me:title>Name And Address</me:title>
+				<me:description>Name And Address</me:description>
+				</appinfo></annotation><sequence><element name="S13" type="es:S_NAD" maxOccurs="1" me:nodetype="SEG"></element><element name="S14" type="es:S_ATT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_RFF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_DTM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_EMP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_LOC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_FTX" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="L_20" type="me:L_20" maxOccurs="9" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_20" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>PAT</me:id>
+				<me:title>Payment Terms Basis</me:title>
+				<me:description>Payment Terms Basis</me:description>
+				</appinfo></annotation><sequence><element name="S20" type="es:S_PAT" maxOccurs="1" me:nodetype="SEG"></element><element name="S21" type="es:S_MOA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S22" type="es:S_CUX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_DTM" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S24" type="es:S_FTX" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="L_25" type="me:L_25" maxOccurs="99" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_25" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>COT</me:id>
+				<me:title>Contribution Details</me:title>
+				<me:description>Contribution Details</me:description>
+				</appinfo></annotation><sequence><element name="S25" type="es:S_COT" maxOccurs="1" me:nodetype="SEG"></element><element name="S26" type="es:S_MOA" maxOccurs="1" me:nodetype="SEG"></element><element name="S27" type="es:S_DTM" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S28" type="es:S_FTX" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

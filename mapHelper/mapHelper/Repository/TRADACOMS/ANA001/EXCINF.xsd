@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/TRADACOMS/map/EXCINF" xmlns:me="http://www.directedi.com/edixml/schema/TRADACOMS/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/TRADACOMS/ANA001/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>EXCINF</me:id>  
+    <me:title>EXCEPTION CONDITION LINE DETAILS</me:title>  
+    <me:plugintype>TRADACOMS</me:plugintype>  
+    <me:ediversion>ANA001</me:ediversion>  
+    <me:functionalGroup>EX</me:functionalGroup>  
+    <me:description>EXCEPTION CONDITION LINE DETAILS</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_SDT" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_PYD" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_EXC" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S4" type="es:S_AUT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --></schema>

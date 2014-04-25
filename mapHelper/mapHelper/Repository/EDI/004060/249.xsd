@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/249" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>249</me:id>  
+    <me:title>ANIMAL TOXICOLOGICAL DATA</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>AT</me:functionalGroup>  
+    <me:description>ANIMAL TOXICOLOGICAL DATA</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_STP" maxOccurs="1" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_8" type="me:L_8" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S3" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_G61" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_8" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>GID</me:id>  
+    <me:title>GROUP IDENTIFICATION</me:title>  
+    <me:description>GROUP IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S8" type="es:S_GID" maxOccurs="1" me:nodetype="SEG"></element><element name="S9" type="es:S_GRP" maxOccurs="1" me:nodetype="SEG"></element><element name="S10" type="es:S_MSG" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S11" type="es:S_GDP" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S12" type="es:S_REF" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="L_13" type="me:L_13" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_17" type="me:L_17" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_13" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S13" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S14" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_17" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>ANI</me:id>  
+    <me:title>ANIMAL IDENTIFICATION</me:title>  
+    <me:description>ANIMAL IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S17" type="es:S_ANI" maxOccurs="1" me:nodetype="SEG"></element><element name="S18" type="es:S_ARC" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S19" type="es:S_GDP" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_ADI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_ATR" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_22" type="me:L_22" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_27" type="me:L_27" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_30" type="me:L_30" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_22" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AOL</me:id>  
+    <me:title>ANIMAL OBSERVATION LOCATION</me:title>  
+    <me:description>ANIMAL OBSERVATION LOCATION</me:description>  
+    </appinfo></annotation><sequence><element name="S22" type="es:S_AOL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_24" type="me:L_24" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_24" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AOR</me:id>  
+    <me:title>ANIMAL OBSERVATION RESULT</me:title>  
+    <me:description>ANIMAL OBSERVATION RESULT</me:description>  
+    </appinfo></annotation><sequence><element name="S24" type="es:S_AOR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S25" type="es:S_NTE" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S26" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_27" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AST</me:id>  
+    <me:title>ANIMAL REPRODUCTIVE STATUS</me:title>  
+    <me:description>ANIMAL REPRODUCTIVE STATUS</me:description>  
+    </appinfo></annotation><sequence><element name="S27" type="es:S_AST" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S28" type="es:S_ADT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S29" type="es:S_AOC" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_30" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AOI</me:id>  
+    <me:title>ANIMAL OFFSPRING/FETUS IDENTIFICATION</me:title>  
+    <me:description>ANIMAL OFFSPRING/FETUS IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S30" type="es:S_AOI" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S31" type="es:S_ATR" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_32" type="me:L_32" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_32" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AOL</me:id>  
+    <me:title>ANIMAL OBSERVATION LOCATION</me:title>  
+    <me:description>ANIMAL OBSERVATION LOCATION</me:description>  
+    </appinfo></annotation><sequence><element name="S32" type="es:S_AOL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S33" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_34" type="me:L_34" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_34" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>AOR</me:id>  
+    <me:title>ANIMAL OBSERVATION RESULT</me:title>  
+    <me:description>ANIMAL OBSERVATION RESULT</me:description>  
+    </appinfo></annotation><sequence><element name="S34" type="es:S_AOR" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S35" type="es:S_NTE" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S36" type="es:S_MSG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

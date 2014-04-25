@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/358" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004010/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>358</me:id>
+				<me:title>U.S. Customs Consist Information</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004010</me:ediversion>
+				<me:functionalGroup>SO</me:functionalGroup>
+				<me:description>U.S. Customs Consist Information</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_M10" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="20" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>P4</me:id>
+				<me:title>U.S. Port Information</me:title>
+				<me:description>U.S. Port Information</me:description>
+				</appinfo></annotation><sequence><element name="S2" type="es:S_P4" maxOccurs="1" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="500" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LX</me:id>
+				<me:title>Assigned Number</me:title>
+				<me:description>Assigned Number</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_LX" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_VID" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" maxOccurs="9999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>MBL</me:id>
+				<me:title>Bill Of Lading</me:title>
+				<me:description>Bill Of Lading</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_MBL" maxOccurs="1" me:nodetype="SEG"></element><element name="S6" type="es:S_M13" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_VID" maxOccurs="500" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

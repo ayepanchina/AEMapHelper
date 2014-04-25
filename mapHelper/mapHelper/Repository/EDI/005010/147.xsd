@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/147" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>147</me:id>  
+    <me:title>RESPONSE TO REQUEST FOR STUDENT EDUCATIONAL RECORD</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>RZ</me:functionalGroup>  
+    <me:description>RESPONSE TO REQUEST FOR STUDENT EDUCATIONAL RECORD</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_AAA" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_REF" maxOccurs="10" me:nodetype="SEG"></element><element name="S4" type="es:S_PWK" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_NTE" maxOccurs="15" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" maxOccurs="2" me:nodetype="LOOP"></element><element name="L_11" type="me:L_11" maxOccurs="15" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_6" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N1</me:id>  
+    <me:title>PARTY IDENTIFICATION</me:title>  
+    <me:description>PARTY IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S6" type="es:S_N1" maxOccurs="1" me:nodetype="SEG"></element><element name="S7" type="es:S_N2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_N3" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_PER" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_11" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>IN1</me:id>  
+    <me:title>INDIVIDUAL IDENTIFICATION</me:title>  
+    <me:description>INDIVIDUAL IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S11" type="es:S_IN1" maxOccurs="1" me:nodetype="SEG"></element><element name="S12" type="es:S_IN2" maxOccurs="10" me:nodetype="SEG"></element></sequence></complexType></schema>

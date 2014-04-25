@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/410" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>410</me:id>
+				<me:title>Rail Carrier Freight Details And Invoice</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>IR</me:functionalGroup>
+				<me:description>Rail Carrier Freight Details And Invoice</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_B3B" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_C4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S3" type="es:S_N9" maxOccurs="30" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="500" me:nodetype="LOOP"></element><element name="S12" type="es:S_N8" maxOccurs="499" me:nodetype="SEG"></element><element name="S13" type="es:S_F9" maxOccurs="1" me:nodetype="SEG"></element><element name="S14" type="es:S_D9" maxOccurs="1" me:nodetype="SEG"></element><element name="L_15" type="me:L_15" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element><element name="L_21" type="me:L_21" minOccurs="0" maxOccurs="6" me:nodetype="LOOP"></element><element name="S24" type="es:S_R2" maxOccurs="13" minOccurs="0" me:nodetype="SEG"></element><element name="S25" type="es:S_R9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S26" type="es:S_RE" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S27" type="es:S_PS" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="L_28" type="me:L_28" maxOccurs="25" me:nodetype="LOOP"></element><element name="L_37" type="me:L_37" minOccurs="0" maxOccurs="64" me:nodetype="LOOP"></element><element name="S42" type="es:S_L3" maxOccurs="1" me:nodetype="SEG"></element><element name="S43" type="es:S_X7" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S44" type="es:S_GA" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N7</me:id>
+				<me:title>Equipment Details</me:title>
+				<me:description>Equipment Details</me:description>
+				</appinfo></annotation><sequence><element name="S4" type="es:S_N7" maxOccurs="1" me:nodetype="SEG"></element><element name="S5" type="es:S_VC" maxOccurs="21" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_G4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_M7" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_N5" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_IC" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_IM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_M12" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_15" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S15" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S19" type="es:S_PER" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_BL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_21" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>S1</me:id>
+				<me:title>Stop-off Name</me:title>
+				<me:description>Stop-off Name</me:description>
+				</appinfo></annotation><sequence><element name="S21" type="es:S_S1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S22" type="es:S_S2" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_S9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_28" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LX</me:id>
+				<me:title>Assigned Number</me:title>
+				<me:description>Assigned Number</me:description>
+				</appinfo></annotation><sequence><element name="S28" type="es:S_LX" maxOccurs="1" me:nodetype="SEG"></element><element name="S29" type="es:S_L5" maxOccurs="15" me:nodetype="SEG"></element><element name="S30" type="es:S_LS" maxOccurs="1" me:nodetype="SEG"></element><element name="L_31" type="me:L_31" maxOccurs="25" me:nodetype="LOOP"></element><element name="S35" type="es:S_LE" maxOccurs="1" me:nodetype="SEG"></element><element name="S36" type="es:S_PI" maxOccurs="30" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_31" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LX</me:id>
+				<me:title>Assigned Number</me:title>
+				<me:description>Assigned Number</me:description>
+				</appinfo></annotation><sequence><element name="S31" type="es:S_LX" maxOccurs="1" me:nodetype="SEG"></element><element name="S32" type="es:S_L0" maxOccurs="10" me:nodetype="SEG"></element><element name="S33" type="es:S_MEA" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S34" type="es:S_L1" maxOccurs="10" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_37" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>T1</me:id>
+				<me:title>Transit Inbound Origin</me:title>
+				<me:description>Transit Inbound Origin</me:description>
+				</appinfo></annotation><sequence><element name="S37" type="es:S_T1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S38" type="es:S_T2" maxOccurs="30" minOccurs="0" me:nodetype="SEG"></element><element name="S39" type="es:S_T3" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S40" type="es:S_T6" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S41" type="es:S_T8" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

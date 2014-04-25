@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/494" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>494</me:id>  
+    <me:title>RAIL SCALE RATES</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>TP</me:functionalGroup>  
+    <me:description>RAIL SCALE RATES</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_REN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DK" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_PI" maxOccurs="8" me:nodetype="SEG"></element><element name="S4" type="es:S_PR" maxOccurs="200" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_SS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_SA" maxOccurs="1" me:nodetype="SEG"></element><element name="S7" type="es:S_CD" maxOccurs="150" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_GY" maxOccurs="150" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_RAB" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_PT" maxOccurs="50" minOccurs="0" me:nodetype="SEG"></element><element name="L_11" type="me:L_11" minOccurs="0" maxOccurs="1" me:nodetype="LOOP"></element><element name="L_14" type="me:L_14" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element><element name="L_17" type="me:L_17" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_11" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>LX</me:id>  
+    <me:title>TRANSACTION SET LINE NUMBER</me:title>  
+    <me:description>TRANSACTION SET LINE NUMBER</me:description>  
+    </appinfo></annotation><sequence><element name="S11" type="es:S_LX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_PI" maxOccurs="15" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_14" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>R9</me:id>  
+    <me:title>ROUTE CODE IDENTIFICATION</me:title>  
+    <me:description>ROUTE CODE IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S14" type="es:S_R9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_15" type="me:L_15" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_15" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>R2B</me:id>  
+    <me:title>JUNCTIONS AND PROPORTIONS</me:title>  
+    <me:description>JUNCTIONS AND PROPORTIONS</me:description>  
+    </appinfo></annotation><sequence><element name="S15" type="es:S_R2B" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_R2C" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_17" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>SCL</me:id>  
+    <me:title>RATE BASIS/SCALES</me:title>  
+    <me:description>RATE BASIS/SCALES</me:description>  
+    </appinfo></annotation><sequence><element name="S17" type="es:S_SCL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_RD" maxOccurs="6" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

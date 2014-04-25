@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/891" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>891</me:id>  
+    <me:title>DEDUCTION RESEARCH REPORT</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>UD</me:functionalGroup>  
+    <me:description>DEDUCTION RESEARCH REPORT</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N1" maxOccurs="2" me:nodetype="SEG"></element><element name="S3" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="L_4" type="me:L_4" maxOccurs="100" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_4" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>ENT</me:id>  
+    <me:title>ENTITY</me:title>  
+    <me:description>ENTITY</me:description>  
+    </appinfo></annotation><sequence><element name="S4" type="es:S_ENT" maxOccurs="1" me:nodetype="SEG"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="100" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N9</me:id>  
+    <me:title>EXTENDED REFERENCE INFORMATION</me:title>  
+    <me:description>EXTENDED REFERENCE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S5" type="es:S_N9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="1000" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_7" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>ADX</me:id>  
+    <me:title>ADJUSTMENT</me:title>  
+    <me:description>ADJUSTMENT</me:description>  
+    </appinfo></annotation><sequence><element name="S7" type="es:S_ADX" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_REF" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

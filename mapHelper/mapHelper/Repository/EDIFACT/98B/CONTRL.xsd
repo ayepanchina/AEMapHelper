@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDIFACT/map/CONTRL" xmlns:me="http://www.directedi.com/edixml/schema/EDIFACT/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDIFACT/98B/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDIFACT/98B/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>CONTRL</me:id>
+				<me:title>Edifact Control Message  (Vers D, Rel 3)</me:title>
+				<me:plugintype>EDIFACT</me:plugintype>
+				<me:ediversion>98B</me:ediversion>
+				<me:functionalGroup></me:functionalGroup>
+				<me:description>Edifact Control Message  (Vers D, Rel 3)</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_UCI" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element><element name="L_5" type="me:L_5" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>UCM</me:id>
+				<me:title>Message Response</me:title>
+				<me:description>Message Response</me:description>
+				</appinfo></annotation><sequence><element name="S2" type="es:S_UCM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>UCS</me:id>
+				<me:title>Segment Error Indication</me:title>
+				<me:description>Segment Error Indication</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_UCS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_UCD" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_5" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>UCF</me:id>
+				<me:title>Functional Group Response</me:title>
+				<me:description>Functional Group Response</me:description>
+				</appinfo></annotation><sequence><element name="S5" type="es:S_UCF" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_6" type="me:L_6" minOccurs="0" maxOccurs="unbounded" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_6" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>UCM</me:id>
+				<me:title>Message Response</me:title>
+				<me:description>Message Response</me:description>
+				</appinfo></annotation><sequence><element name="S6" type="es:S_UCM" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_7" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>UCS</me:id>
+				<me:title>Segment Error Indication</me:title>
+				<me:description>Segment Error Indication</me:description>
+				</appinfo></annotation><sequence><element name="S7" type="es:S_UCS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_UCD" maxOccurs="99" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

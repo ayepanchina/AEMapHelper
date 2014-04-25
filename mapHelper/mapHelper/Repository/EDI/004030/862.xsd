@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/862" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004030/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/004030/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>862</me:id>
+				<me:title>Shipping Schedule</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>004030</me:ediversion>
+				<me:functionalGroup>SS</me:functionalGroup>
+				<me:description>Shipping Schedule</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_BSS" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_DTM" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" minOccurs="0" maxOccurs="200" me:nodetype="LOOP"></element><element name="L_10" type="me:L_10" maxOccurs="10000" me:nodetype="LOOP"></element><element name="S29" type="es:S_CTT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>N1</me:id>
+				<me:title>Name</me:title>
+				<me:description>Name</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_N2" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_N3" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_N4" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_REF" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_PER" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_FOB" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_10" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>LIN</me:id>
+				<me:title>Item Identification</me:title>
+				<me:description>Item Identification</me:description>
+				</appinfo></annotation><sequence><element name="S10" type="es:S_LIN" maxOccurs="1" me:nodetype="SEG"></element><element name="S11" type="es:S_UIT" maxOccurs="1" me:nodetype="SEG"></element><element name="S12" type="es:S_PKG" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S13" type="es:S_PO4" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S14" type="es:S_PRS" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S15" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S16" type="es:S_REF" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element><element name="S17" type="es:S_PER" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S18" type="es:S_SDP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_19" type="me:L_19" minOccurs="0" maxOccurs="100" me:nodetype="LOOP"></element><element name="L_24" type="me:L_24" minOccurs="0" maxOccurs="10" me:nodetype="LOOP"></element><element name="S26" type="es:S_TD1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S27" type="es:S_TD3" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S28" type="es:S_TD5" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_19" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>FST</me:id>
+				<me:title>Forecast Schedule</me:title>
+				<me:description>Forecast Schedule</me:description>
+				</appinfo></annotation><sequence><element name="S19" type="es:S_FST" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S20" type="es:S_DTM" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="S21" type="es:S_SDQ" maxOccurs="unbounded" minOccurs="0" me:nodetype="SEG"></element><element name="L_22" type="me:L_22" minOccurs="0" maxOccurs="96" me:nodetype="LOOP"></element></sequence></complexType><complexType name="L_22" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>JIT</me:id>
+				<me:title>Just-in-time Schedule</me:title>
+				<me:description>Just-in-time Schedule</me:description>
+				</appinfo></annotation><sequence><element name="S22" type="es:S_JIT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S23" type="es:S_REF" maxOccurs="500" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><complexType name="L_24" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>SHP</me:id>
+				<me:title>Shipped/received Information</me:title>
+				<me:description>Shipped/received Information</me:description>
+				</appinfo></annotation><sequence><element name="S24" type="es:S_SHP" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S25" type="es:S_REF" maxOccurs="12" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

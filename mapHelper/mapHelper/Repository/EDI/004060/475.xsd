@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/475" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/004060/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/004060/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>475</me:id>  
+    <me:title>RAIL ROUTE FILE MAINTENANCE</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>004060</me:ediversion>  
+    <me:functionalGroup>SN</me:functionalGroup>  
+    <me:description>RAIL ROUTE FILE MAINTENANCE</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BGN" maxOccurs="1" me:nodetype="SEG"></element><element name="L_2" type="me:L_2" maxOccurs="50" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_2" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>R9</me:id>  
+    <me:title>ROUTE CODE IDENTIFICATION</me:title>  
+    <me:description>ROUTE CODE IDENTIFICATION</me:description>  
+    </appinfo></annotation><sequence><element name="S2" type="es:S_R9" maxOccurs="1" me:nodetype="SEG"></element><element name="S3" type="es:S_PER" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_DTM" maxOccurs="10" me:nodetype="SEG"></element><element name="S5" type="es:S_RDD" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

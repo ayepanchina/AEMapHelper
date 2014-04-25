@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/421" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>421</me:id>
+				<me:title>Estimated Time Of Arrival And Car Schedu</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>IS</me:functionalGroup>
+				<me:description>Estimated Time Of Arrival And Car Schedu</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_IS1" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N9" maxOccurs="3" me:nodetype="SEG"></element><element name="S3" type="es:S_ISC" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S4" type="es:S_N8" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_IS2" maxOccurs="unbounded" me:nodetype="SEG"></element><element name="S6" type="es:S_F9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S7" type="es:S_D9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_N1" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_S9" maxOccurs="5" minOccurs="0" me:nodetype="SEG"></element><element name="S10" type="es:S_R2" maxOccurs="13" minOccurs="0" me:nodetype="SEG"></element><element name="S11" type="es:S_L5" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S12" type="es:S_H3" maxOccurs="6" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType><!-- Loop definitions --></schema>

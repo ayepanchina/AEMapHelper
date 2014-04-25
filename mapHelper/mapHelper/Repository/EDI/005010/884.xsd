@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/884" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/005010/segment" xmlns="http://www.w3.org/2001/XMLSchema">  
+ <import namespace="http://www.directedi.com/edixml/schema/EDI/005010/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>  
+   <appinfo>  
+    <me:id>884</me:id>  
+    <me:title>MARKET DEVELOPMENT FUND SETTLEMENT</me:title>  
+    <me:plugintype>EDI</me:plugintype>  
+    <me:ediversion>005010</me:ediversion>  
+    <me:functionalGroup>MF</me:functionalGroup>  
+    <me:description>MARKET DEVELOPMENT FUND SETTLEMENT</me:description>      
+   </appinfo></annotation><sequence>  
+<element name="S1" type="es:S_BMP" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_N1" maxOccurs="5" me:nodetype="SEG"></element><element name="S3" type="es:S_G61" maxOccurs="3" minOccurs="0" me:nodetype="SEG"></element><element name="S4" type="es:S_NTE" maxOccurs="10" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_QTY" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S6" type="es:S_BAL" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="L_7" type="me:L_7" minOccurs="0" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_7" me:nodetype="LOOP">  
+<annotation><appinfo>  
+    <me:id>N9</me:id>  
+    <me:title>EXTENDED REFERENCE INFORMATION</me:title>  
+    <me:description>EXTENDED REFERENCE INFORMATION</me:description>  
+    </appinfo></annotation><sequence><element name="S7" type="es:S_N9" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S8" type="es:S_AMT" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element><element name="S9" type="es:S_N1" maxOccurs="1" minOccurs="0" me:nodetype="SEG"></element></sequence></complexType></schema>

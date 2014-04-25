@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.directedi.com/edixml/schema/EDI/map/323" xmlns:me="http://www.directedi.com/edixml/schema/EDI/map/mapName" xmlns:es="http://www.directedi.com/edixml/schema/EDI/003050/segment" xmlns="http://www.w3.org/2001/XMLSchema">
+	<import namespace="http://www.directedi.com/edixml/schema/EDI/003050/segment" schemaLocation="segment.xsd"/><complexType name="MAP" me:nodetype="MAP"><annotation>
+			<appinfo>
+				<me:id>323</me:id>
+				<me:title>Vessel Schedule And Itinerary (Ocean)</me:title>
+				<me:plugintype>EDI</me:plugintype>
+				<me:ediversion>003050</me:ediversion>
+				<me:functionalGroup>SO</me:functionalGroup>
+				<me:description>Vessel Schedule And Itinerary (Ocean)</me:description>				
+			</appinfo></annotation><sequence>
+<element name="S1" type="es:S_V1" maxOccurs="1" me:nodetype="SEG"></element><element name="S2" type="es:S_K1" maxOccurs="2" minOccurs="0" me:nodetype="SEG"></element><element name="L_3" type="me:L_3" maxOccurs="999" me:nodetype="LOOP"></element></sequence></complexType><!-- Loop definitions --><complexType name="L_3" me:nodetype="LOOP">
+<annotation><appinfo>
+				<me:id>R4</me:id>
+				<me:title>Port</me:title>
+				<me:description>Port</me:description>
+				</appinfo></annotation><sequence><element name="S3" type="es:S_R4" maxOccurs="1" me:nodetype="SEG"></element><element name="S4" type="es:S_DTM" maxOccurs="15" minOccurs="0" me:nodetype="SEG"></element><element name="S5" type="es:S_V9" maxOccurs="5" me:nodetype="SEG"></element></sequence></complexType></schema>
