@@ -13,7 +13,7 @@ namespace mapHelper
        public String minLength;
        public String maxLength;
        public String datatype;
-       public String segmantTag;
+       public String segmentTag;
        public String position;
        public String refenerceNum;
     }
