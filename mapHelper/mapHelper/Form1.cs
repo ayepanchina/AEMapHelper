@@ -1,4 +1,8 @@
 ﻿using System;
+<<<<<<< HEAD
+=======
+using System.Collections;
+>>>>>>> 375b6da8952ce6171e832bd9a69bc4fcfb1eed88
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +13,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
+using System.Xml;
+>>>>>>> 375b6da8952ce6171e832bd9a69bc4fcfb1eed88
 
 namespace mapHelper
 {
@@ -23,6 +31,7 @@ namespace mapHelper
         {
             // Show the dialog and get result.
             DialogResult result = openFileDialog1.ShowDialog();
+<<<<<<< HEAD
             FieldDef fd = new FieldDef("Name");
             var fd1 = new List<FieldDef>();
           //  fd1.Add("Name1");
@@ -80,3 +89,24 @@ namespace mapHelper
         }
     }
 }
+=======
+            if (result == DialogResult.OK) // Test result.
+            {
+                string dataElementPath = Directory.GetCurrentDirectory();
+                dataElementPath = dataElementPath + "\\Repository\\EDI\\004010\\standard\\dataelement.xsd";
+                string segmentPath = Directory.GetCurrentDirectory();
+                segmentPath = segmentPath + "\\Repository\\EDI\\004010\\standard\\segment.xsd";
+                Console.WriteLine(segmentPath);
+                fileName = openFileDialog1.FileName;
+                InputDataParser inputData = new InputDataParser(segmentPath, dataElementPath, fileName);
+            }
+
+            Console.WriteLine(fileName); // <-- For debugging use.
+        }
+    
+   
+        }
+    }
+
+
+>>>>>>> 375b6da8952ce6171e832bd9a69bc4fcfb1eed88

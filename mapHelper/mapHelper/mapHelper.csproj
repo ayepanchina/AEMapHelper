@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="WriteFile.cs" />
     <Compile Include="FieldDef.cs" />
+    <Compile Include="InputDataParser.cs" />
     <Compile Include="Segment.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
