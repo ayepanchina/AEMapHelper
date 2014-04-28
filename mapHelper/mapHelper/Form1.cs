@@ -23,22 +23,28 @@ namespace mapHelper
         {
             // Show the dialog and get result.
             DialogResult result = openFileDialog1.ShowDialog();
+            FieldDef fd = new FieldDef("Name");
+            var fd1 = new List<FieldDef>();
+          //  fd1.Add("Name1");
+            //var fd1 = new FieldDef["name1","name2"];
+            WriteFile wf = new WriteFile(fd);
             if (result == DialogResult.OK) // Test result.
             {
-                string directory = Directory.GetCurrentDirectory();
-                Console.WriteLine(directory);
-                fileName = openFileDialog1.FileName;
-                List<Segment> Sections = Parse(fileName);
-                foreach (Segment seg in Sections)
-                {
-                    Console.WriteLine();
-                    Console.Write(seg.Name + " ");
-                    for (int i = 0; i < seg.elements.Count; i++)
-                    {
-                        Console.Write(seg.elements[i].number + " " );
-                        Console.Write(seg.elements[i].Value + " ");
-                    }
-                }
+                //string directory = Directory.GetCurrentDirectory();
+                //Console.WriteLine(directory);
+                //fileName = openFileDialog1.FileName;
+                //List<Segment> Sections = Parse(fileName);
+                //foreach (Segment seg in Sections)
+                //{
+                //    Console.WriteLine();
+                //    Console.Write(seg.Name + " ");
+                //    for (int i = 0; i < seg.elements.Count; i++)
+                //    {
+                //        Console.Write(seg.elements[i].number + " " );
+                //        Console.Write(seg.elements[i].Value + " ");
+                //    }
+                //}
+               
             }
             Console.WriteLine(fileName); // <-- For debugging use.
         }

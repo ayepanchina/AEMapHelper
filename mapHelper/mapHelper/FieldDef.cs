@@ -16,5 +16,12 @@ namespace mapHelper
        public String segmantTag;
        public String position;
        public String refenerceNum;
+
+
+       public FieldDef(String name)
+       {
+           this.name = name; 
+       }
     }
+
 }
