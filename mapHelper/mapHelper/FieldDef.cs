@@ -16,7 +16,7 @@ namespace mapHelper
        public String segmentTag;
        public String position;
        public String refenerceNum;
-
+       public int precision;
 
       
     }

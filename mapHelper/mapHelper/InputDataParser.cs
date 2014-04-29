@@ -35,6 +35,8 @@ namespace mapHelper
                 Console.Write(field.javaName + " ");
                 Console.Write(field.minLength + " ");
                 Console.Write(field.maxLength + " ");
+                Console.Write(field.datatype + " ");
+                Console.Write(field.precision + " ");
 
             }
         }
@@ -179,8 +181,14 @@ namespace mapHelper
                                                                             }
 
                                                                         }
-                                                                        if (simpleTypeChildNote.Name.ToString().Equals("restriction")) //если дочерний узел называется restriction
+                                                                        if (simpleTypeChildNote.Name.ToString().Equals("restriction") & flag) //если дочерний узел называется restriction
                                                                         {
+                                                                            DataTypes dt = new DataTypes (simpleTypeChildNote.Attributes["base"].Value.Substring(3));//конвертируем тип данных
+                                                                            field.datatype = dt.outputData;
+                                                                            if (simpleTypeChildNote.Attributes["base"].Value.Substring(3).Equals("N2"))//устанавливаем precision для типа N2
+                                                                            {
+                                                                                field.precision = 2;
+                                                                            }
                                                                             if (simpleTypeChildNote.HasChildNodes)
                                                                             {
                                                                                 IEnumerator ienum = simpleTypeChildNote.GetEnumerator();
@@ -224,7 +232,7 @@ namespace mapHelper
                 }
 
                     }
-            if (field != null) // если у нас уже есть объект секции т.е. ссылка не null
+            if (field != null) // если у нас уже есть объект поля т.е. ссылка не null
                 allFields.Add(field); //записываем в лист
             fs.Close(); //закрваем потоки
             fs2.Close();

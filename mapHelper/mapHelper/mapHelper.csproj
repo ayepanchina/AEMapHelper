@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTypes.cs" />
     <Compile Include="WriteFile.cs" />
     <Compile Include="FieldDef.cs" />
     <Compile Include="InputDataParser.cs" />

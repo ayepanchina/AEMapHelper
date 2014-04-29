@@ -37,10 +37,11 @@ namespace mapHelper
        
             if (result == DialogResult.OK) // Test result.
             {
-                string dataElementPath = Directory.GetCurrentDirectory();
-                dataElementPath = dataElementPath + "\\Repository\\EDI\\004010\\standard\\dataelement.xsd";
-                string segmentPath = Directory.GetCurrentDirectory();
-                segmentPath = segmentPath + "\\Repository\\EDI\\004010\\standard\\segment.xsd";
+                string dataElementPath =  Directory.GetCurrentDirectory();
+                string bin = Directory.GetParent(dataElementPath).ToString();
+                dataElementPath = Directory.GetParent(bin) + "\\Repository\\EDI\\004010\\standard\\dataelement.xsd";
+                Console.WriteLine(dataElementPath);
+                string segmentPath = Directory.GetParent(bin) + "\\Repository\\EDI\\004010\\standard\\segment.xsd";
                 Console.WriteLine(segmentPath);
                 fileName = openFileDialog1.FileName;
                 InputDataParser inputData = new InputDataParser(segmentPath, dataElementPath, fileName);
