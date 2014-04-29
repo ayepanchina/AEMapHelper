@@ -6,12 +6,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Xml;
 
 namespace mapHelper
@@ -27,11 +25,8 @@ namespace mapHelper
         {
             // Show the dialog and get result.
             DialogResult result = openFileDialog1.ShowDialog();
-            FieldDef fd = new FieldDef();
             var fd1 = new List<FieldDef>();
-          //  fd1.Add("Name1");
-            //var fd1 = new FieldDef["name1","name2"];
-        //    WriteFile wf = new WriteFile(fd);
+           
           
             Console.WriteLine(fileName); // <-- For debugging use.
        
@@ -45,6 +40,8 @@ namespace mapHelper
                 Console.WriteLine(segmentPath);
                 fileName = openFileDialog1.FileName;
                 InputDataParser inputData = new InputDataParser(segmentPath, dataElementPath, fileName);
+                WriteFile wf = new WriteFile(inputData.allFields);
+               
             }
 
             Console.WriteLine(fileName); // <-- For debugging use.

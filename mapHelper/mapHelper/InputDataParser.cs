@@ -45,7 +45,6 @@ namespace mapHelper
         {
 
             var list = new List<Segment>(); // лист объектов класса сегментов
-            string j="000";
             Segment sec = null; // создаем новую ссылку на объект типа сегмент
             foreach (string s in File.ReadAllLines(testFilePath)) // проходим по всем строкам в файле
                 if (s.StartsWith("S")) // если найдено совпадение (начало сегмента)
