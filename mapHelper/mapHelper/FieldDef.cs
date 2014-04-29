@@ -18,10 +18,7 @@ namespace mapHelper
        public String refenerceNum;
 
 
-       public FieldDef(String name)
-       {
-           this.name = name; 
-       }
+      
     }
 
 }
