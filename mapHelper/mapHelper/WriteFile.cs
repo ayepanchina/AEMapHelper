@@ -38,11 +38,22 @@ namespace mapHelper
             write_text.WriteLine(" <SPSFILE name=\"SPS Commerce Xtencil\" date=\"4/23/2014\" fileType=\"FORM\" contents=\"NORM\">"); 
             write_text.WriteLine("<DOCUMENTDEF name=\"MotorCarrierFreightDetail\" javaName=\"motorCarrierFreightDetail\" javaPackageName=\"Standard\" xtencilType=\"XML\" designDate=\"4/23/2014\" resolverFetch=\"Y\" lastModifiedBy=\"\">");
             write_text.WriteLine("<GROUPDEF name=\"Header\" javaName=\"header\" min=\"1\" max=\"1\" exclude=\"N\" justification=\"Left\" display=\"Y\" enable=\"Y\" print=\"Y\" nextRow=\"N\" sourceFilter=\"No Filter\" isRecord=\"N\" persistent=\"Y\" present=\"Y\" includeInTestFile=\"Y\">");
-            write_text.WriteLine(" <FIELDDEF name=\"Transaction Type\" javaName=\"setPurpose\" minLength=\"2\" maxLength=\"2\" dataType=\"JMappedSet\" rounding=\"2\" choices=\"00:Original,01:Cancellation,05:Replace\" mandatory=\"N\" exclude=\"N\" display=\"Y\" editable=\"Y\" enable=\"Y\" print=\"Y\" nextRow=\"N\" keyType=\"NONE\" persistent=\"Y\" present=\"Y\" templatable=\"Y\" dtdRequired=\"N\" edi=\"Y\" segmentTag=\"BEG\" position=\"01\" referenceNum=\"353\" autoQualifier=\"Y\" includeInTestFile=\"Y\"></FIELDDEF>");
-           foreach ( FieldDef field in all)
+             foreach ( FieldDef field in all)
            {
-                write_text.WriteLine(" <FIELDDEF name=\""+ field.name +
-                    "\" "+"javaName=\"" + field.javaName + "\"" + " minLength=\"2\" maxLength=\"2\" dataType=\"JMappedSet\" rounding=\"2\" choices=\"00:Original,01:Cancellation,05:Replace\" mandatory=\"N\" exclude=\"N\" display=\"Y\" editable=\"Y\" enable=\"Y\" print=\"Y\" nextRow=\"N\" keyType=\"NONE\" persistent=\"Y\" present=\"Y\" templatable=\"Y\" dtdRequired=\"N\" edi=\"Y\" segmentTag=\"BEG\" position=\"01\" referenceNum=\"353\" autoQualifier=\"Y\" includeInTestFile=\"Y\"></FIELDDEF>");
+                write_text.WriteLine(" <FIELDDEF name=\""+ field.name + "\" "
+                    +" javaName=\"" + field.javaName + "\""
+                    + " minLength=\""+ field.minLength+ "\""
+                    + " maxLength=\"" + field.maxLength + "\""
+                    + " dataType=\"" + field.datatype + "\" rounding=\"2\"");
+                if (field.precision==2) write_text.Write (" precision=\"2\"");
+               write_text.Write (   
+                    " mandatory=\"N\" exclude=\"N\" display=\"Y\" editable=\"Y\" enable=\"Y\" print=\"Y\" nextRow=\"N\" keyType=\"NONE\" persistent=\"Y\" present=\"Y\" templatable=\"Y\" dtdRequired=\"N\""
+                    +" edi=\"Y\""
+                    + " segmentTag=\"" + field.segmentTag + "\""
+                    + " position=\"" + field.position + "\""
+                     + " referenceNum=\"" + field.refenerceNum + "\""
+                     +" includeInTestFile=\"Y\">"
+                     +"</FIELDDEF>");
          
            }
             write_text.WriteLine(" </GROUPDEF>");
