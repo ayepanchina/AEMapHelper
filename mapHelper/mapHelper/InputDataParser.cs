@@ -11,10 +11,11 @@ namespace mapHelper
 {
     class InputDataParser
     {
-
+        public List<FieldDef> allFields;
         public InputDataParser (string segmentPath, string dataelementPath, string testFilePath)
         {
-            xmlParse(segmentPath, dataelementPath, Parse(testFilePath));
+            allFields = xmlParse(segmentPath, dataelementPath, Parse(testFilePath));
+            
             foreach (Segment seg in Parse(testFilePath))
             {
                 Console.WriteLine();
