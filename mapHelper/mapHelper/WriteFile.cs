@@ -14,24 +14,25 @@ using System.Collections.ObjectModel;
 
 namespace mapHelper
 {
-    public class WriteFile
+    public class WriteFile : Form1
     {
         String someName;
-   
-      public WriteFile(List<FieldDef> all)
+
+        public WriteFile(List<FieldDef> all, String pathFolder, String xtlName)
        {
            System.Console.WriteLine("Write Block:");
-           
-           FileInfo file = new FileInfo("C:\\temp\\test1.xtl");
+
+           FileInfo file = new FileInfo(pathFolder + "\\test1.xtl");
            if (file.Exists == true) //Если файл существует
            {
                file.Delete(); //Удаляем
            }
           // else MessageBox.Show("Файла не существует!!");
-
+           if (!xtlName.Contains(".xtl"))
+               xtlName = xtlName + ".xtl";
 
            StreamWriter write_text;  //Класс для записи в файл
-           file = new FileInfo("C:\\temp\\test1.xtl");
+           file = new FileInfo(pathFolder + "\\" + xtlName);
            write_text = file.AppendText(); //Дописываем инфу в файл, если файла не существует он создастся
            write_text.WriteLine("<?xml version='1.0' encoding='UTF-8'?>");
            write_text.WriteLine("<!DOCTYPE SPSFILE SYSTEM '../form/Xtencil.dtd'>"); 
