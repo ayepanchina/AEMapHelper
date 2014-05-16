@@ -40,7 +40,7 @@ namespace mapHelper
                 Console.WriteLine(segmentPath);
                 fileName = openFileDialog1.FileName;
                 InputDataParser inputData = new InputDataParser(segmentPath, dataElementPath, fileName);
-                WriteFile wf = new WriteFile(inputData.allFields);
+                WriteFile wf = new WriteFile(inputData.allFields, Directory.GetParent(bin) + "\\Repository\\EDI\\004010\\850.xsd");
                
             }
 
